@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "matchHeight.js": {
+      "bower": ["matchHeight"]
+    },
+    "home.js": {
+      "bower": ["slick-carousel"],
+      "files": [
+        "scripts/carousel.js"
+      ]
+    }
+  },
+  "config": {
+    "devUrl": "http://localhost:8888/c4c-wordpress-theme/wp/"
+  }
+}

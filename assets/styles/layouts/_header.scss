@@ -1,0 +1,48 @@
+.main-header {
+	h1.logo {
+		margin: 0;
+		padding: 0.5em 0;
+		text-align: center;
+		transition: all 0.5s ease;
+	}
+	h1.logo img { height: 80px; }
+
+	// Make things tighter when we have a smaller screen
+
+	@include breakpoint-max('sm') {
+		h1.logo { padding: 0.25em; }
+		h1.logo img { max-height: 50px;	}
+	}
+}
+
+.navbar-c4c {
+	background: $c4c-yellow;
+}
+.navbar-nav {
+	text-align: center;
+	float: none;
+
+	ul {
+		text-align: center;
+	}
+
+	li {
+		@extend .text-letter-spacing;
+		@extend .text-uppercase;
+		@extend .text-strong;
+		@include flex-text(14px);
+
+		list-style: none;
+		float: none;
+		display: inline-block;
+		padding: 1.3em 1.2em;
+	}
+
+	li a { color: #000; }
+	li a:hover {
+		text-decoration: none;
+		color: #fff;
+
+		@include text-shadow(1px);
+	}
+}

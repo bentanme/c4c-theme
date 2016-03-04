@@ -1,0 +1,38 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$c4c-yellow:			#fcd91d;
+$c4c-blue:				#65aedb;
+$c4c-blue-dark:			#4b85af;
+$c4c-red:				#c73828;
+$c4c-border:			#eee;
+
+$brand-primary:         $c4c-red;
+$brand-success:         #27ae60;
+$brand-info: 	        #27ae60;
+$brand-warning:         #27ae60;
+$brand-danger:			#27ae60;
+
+$state-warning-text: darken($brand-warning,35);
+$state-warning-bg: lighten($brand-warning,20);
+$state-success-text: darken($brand-success,30);
+$state-success-bg: lighten($brand-success,20);
+$state-info-text: darken($brand-info,25);
+$state-info-bg: lighten($brand-info,20);
+$state-danger-text: darken($brand-danger,25);
+$state-danger-bg: lighten($brand-danger,20);
+
+// Fonts
+$font-family-sans-serif: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+$font-family-serif: 'Lora', 'Times', 'Georgia', serif;
+$font-family-fancy: 'Satisfy', cursive;
+
+// Radius
+$border-radius-base:	2px;
+$border-radius-small:	2px;
+$border-radius-large:	2px;

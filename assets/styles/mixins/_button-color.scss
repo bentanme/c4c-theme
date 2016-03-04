@@ -1,0 +1,7 @@
+// Creates different hover colours according to inputs
+
+@mixin button-color($color, $font-color) {
+	& {	background: $color; color: $font-color;	}
+	&:hover { background: darken($color, 10%); color: $font-color; }
+	&:active { background: darkern($color, 10%); color: $font-color; }
+}

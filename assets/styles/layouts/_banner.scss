@@ -1,0 +1,141 @@
+$banner-min-height: 400px;
+
+.banner__group {
+	position: relative;
+}
+
+.banner__carousel {
+	overflow: hidden;
+	outline: 0 !important;
+}
+
+// Height settings
+.banner,
+.banner__overlay,
+.latest-posts-offset {
+	width: 100%;
+	height: $banner-min-height;
+	@include breakpoint-min('sm') { min-height: $banner-min-height * 1.1; }
+	@include breakpoint-min('md') { min-height: $banner-min-height * 1.4; }
+	@include breakpoint-min('lg') { min-height: $banner-min-height * 1.4; }
+}
+
+.banner {
+	background-size: cover;
+	background-color: #000;
+	background-position: 50% 50%;
+	display: inline-block;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+
+	// Reveal on page load
+	&--reveal {
+		opacity: 1;
+	}
+}
+
+.banner__overlay {
+	@include background-image(linear-gradient(50deg, rgba(0,0,0,0.6) 0, transparent 70%));
+	padding: 3em 0;
+
+	@include breakpoint-max('sm') {
+		@include background-image(linear-gradient(50deg, rgba(0,0,0,0.6) 0, transparent 100%));
+	}
+}
+
+.banner__header {
+	@include flex-text(70px);
+	@include text-shadow(3px);
+
+	color: #fff;
+	font-family: $font-family-fancy;
+	margin: -0.5em 0 0 0;
+
+}
+
+.banner__description {
+	@include flex-text(24px);
+	@include text-shadow(3px);
+	@extend .text-strong;
+
+	color: #fff;
+	letter-spacing: -0.02em;
+}
+
+// Used to overlay the panel on top of the banner images
+.banner__latest-overlay {
+
+}
+
+.banner__latest-panel {
+	
+	z-index: 1000;
+	border-radius: 0;
+	border: 0;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: opacity 1s ease-in-out 0.5s;
+
+	&--reveal {
+		opacity: 1;
+	}
+
+	& .panel-heading {
+		@include text-shadow(1px);
+
+		background: $c4c-red;
+		border-radius: 0;
+		color: #fff;
+
+		h2 {
+			line-height: 50px;
+			display: inline-block;
+		}
+		span {
+			float: right;
+			line-height: 50px;
+			position: relative;
+		}
+
+		a { color: lighten($c4c-red, 30%) }
+	}
+
+	// Item list
+
+	ul { padding: 0; margin: -15px; }
+	li {
+		list-style: none;
+		padding: 0.8em 15px;
+		border-bottom: 1px solid $c4c-border;
+	}
+
+	// Anchor wraps around li element
+
+	a {
+		text-decoration: none;
+		transition: background 0.5s ease-in-out;
+
+		&:hover li { color: lighten(#333, 40%); }
+		li { color: #333; }
+	}
+	a.active {
+		li {
+			background: lighten($c4c-yellow, 40%);
+			color: $c4c-red;
+		}
+	}
+	a:hover.active { color: $c4c-red; }
+
+	.media-object {	height: 60px; }
+
+	.media-body { padding-left: 0.25em; }
+	a:hover .media-object { @include box-shadow(2px); }
+
+	h4 { margin: 0; font-weight: 800; }
+	p { margin: 0; }
+}

@@ -1,0 +1,11 @@
+// Upside down caret
+.caret.caret--up,
+.caret.caret-up {
+    border-top-width: 0;
+    border-bottom: 4px solid $text-color;
+}
+
+a .caret.caret--up,
+a .caret.caret-up {
+	border-bottom: 4px solid $link-color;
+}

@@ -1,0 +1,32 @@
+.text-letter-spacing { letter-spacing: .1em; }
+
+.text-uppercase { text-transform: uppercase; }
+
+.text-fancy { font-family: $font-family-fancy; }
+
+.text-bold,
+.text-strong { font-weight: 800; }
+.text-shadow { @include text-shadow(2px); }
+
+.text-center--sm { @include breakpoint-max('sm') { text-align: center; } }
+.text-center--md { @include breakpoint-max('md') { text-align: center; } }
+
+// Text coloring
+
+.text-white { color: #fff; }
+.text-red { color: $c4c-red; }
+.text-yellow { color: $c4c-yellow; }
+.text-blue { color: $c4c-blue; }
+
+// A small arrow displayed after content denoting an action
+
+.action-arrow--after:after,
+.action-arrow:after {
+	content: "\203A";
+	padding-left: 0.3em;
+}
+
+.action-arrow--before:before {
+	content: "\2039";
+	padding-right: 0.3em;
+}

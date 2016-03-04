@@ -1,0 +1,21 @@
+/**
+ *
+ * Vertically center objects using CSS.
+ * ===============================================
+ * Requires styles to be applied to both the parent and child
+ * elements.
+ *
+ */
+
+.vertically {
+    &--child {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    &--parent {
+        display: table;
+        width: 100%;
+    }
+}
