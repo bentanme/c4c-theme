@@ -31,3 +31,7 @@ To get gulp working, run `gulp watch --production` also from the theme root. Thi
 Assets that require concat and minifying are added through the `manifest.json`. The gulp watch task will need to be terminated and reloaded for the manifest.json to update and take effect.
 
 Then to add the script to load globally when using this theme, add it to the `lib/setup.php` file.
+
+``wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);``
+
+Otherwise, if it is page-specific, add the `wp_enqueue_script()` function in the `page-template.php`.
