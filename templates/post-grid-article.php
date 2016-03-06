@@ -1,8 +1,10 @@
+<?php
 /**
  *
  * Template for article when being displayed as grid, e.g. like on home page
  *
  */
+?>
 
 <a href="">
 	<div class="post-grid__article">
