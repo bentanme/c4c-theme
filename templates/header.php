@@ -1,11 +1,14 @@
 <header class="main-header">
+
   <div class="container">
-    <h1 class="logo text-center"><a href="<?= get_bloginfo('blog_url') ?>"><img src="<?= get_bloginfo('template_url') ?>/assets/images/c4c-logo.svg" alt="Cooking 4 Change Logo" /></a></h1>
+    <!-- Site logo -->
+    <h1 class="logo text-center"><a href="<?= site_url() ?>"><img src="<?= get_bloginfo('template_url') ?>/assets/images/c4c-logo.svg" alt="Cooking 4 Change Logo" /></a></h1>
   </div>
 
   <nav class="navbar-c4c">
     <div class="container">
       <div class="container-fluid">
+
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav" aria-expanded="false">

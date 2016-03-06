@@ -23,6 +23,9 @@
     "matchHeight.js": {
       "bower": ["matchHeight"]
     },
+    "responsive-bootstrap-toolkit.js": {
+      "bower": ["responsive-bootstrap-toolkit"]
+    },
     "home.js": {
       "bower": ["slick-carousel"],
       "files": [

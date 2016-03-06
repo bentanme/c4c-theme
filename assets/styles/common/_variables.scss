@@ -7,16 +7,24 @@ $sidebar-sm-columns:    4;
 
 // Colors
 $c4c-yellow:			#fcd91d;
+$c4c-yellow-light:		lighten($c4c-yellow, 30%);
 $c4c-blue:				#65aedb;
 $c4c-blue-dark:			#4b85af;
 $c4c-red:				#c73828;
 $c4c-border:			#eee;
+$c4c-grey:				#aaa;
 
 $brand-primary:         $c4c-red;
 $brand-success:         #27ae60;
-$brand-info: 	        #27ae60;
-$brand-warning:         #27ae60;
-$brand-danger:			#27ae60;
+$brand-info: 	        $c4c-blue;
+$brand-warning:         darken($c4c-yellow, 0%);
+$brand-danger:			$c4c-red;
+
+// Company colours
+$company-facebook:		#2b3990;
+$company-youtube:		#ef4136;
+$company-twitter:		#27aae1;
+$company-instagram:		#1c75bc;
 
 $state-warning-text: darken($brand-warning,35);
 $state-warning-bg: lighten($brand-warning,20);
@@ -28,6 +36,7 @@ $state-danger-text: darken($brand-danger,25);
 $state-danger-bg: lighten($brand-danger,20);
 
 // Fonts
+$font-size-base: 14px;
 $font-family-sans-serif: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 $font-family-serif: 'Lora', 'Times', 'Georgia', serif;
 $font-family-fancy: 'Satisfy', cursive;

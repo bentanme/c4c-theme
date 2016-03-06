@@ -9,7 +9,9 @@
   "dependencies": {
     "bootstrap-sass": "3.3.6",
     "matchHeight": "liabru/jquery-match-height#~0.7.0",
-    "slick-carousel": "kenwheeler/slick#~1.5.9"
+    "slick-carousel": "kenwheeler/slick#~1.5.9",
+    "response.js": "ryanve/response.js#~0.9.1",
+    "responsive-bootstrap-toolkit": "maciej-gurban/responsive-bootstrap-toolkit#~2.5.1"
   },
   "overrides": {
     "bootstrap-sass": {

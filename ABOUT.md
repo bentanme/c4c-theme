@@ -35,3 +35,26 @@ Then to add the script to load globally when using this theme, add it to the `li
 ``wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);``
 
 Otherwise, if it is page-specific, add the `wp_enqueue_script()` function in the `page-template.php`.
+
+# Post types
+
+There are currently two types of blog posts planned, each one described below. The intension is to use a plugin like ACF (Advanced Custom Fields - http://www.advancedcustomfields.com/) to create the custom post types.
+
+## Normal post
+
+The normal post type behaves like a normal post. It should have the following attributes:
+
+*   Title
+*   Content
+*   Excerpt
+*   Hero image
+
+## Video post
+
+This is similar to a normal post, however will allow us to display a page specifically designed for vidoes.
+
+*   Title
+*   Content
+*   Excerpt
+*   Hero image
+*   Video URL

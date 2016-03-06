@@ -4,6 +4,12 @@ $banner-min-height: 400px;
 	position: relative;
 }
 
+// Remove ugly blue border outline
+.banner__group,
+.banner__group * {
+    outline: none;
+}
+
 .banner__carousel {
 	overflow: hidden;
 	outline: 0 !important;
@@ -25,6 +31,7 @@ $banner-min-height: 400px;
 	background-color: #000;
 	background-position: 50% 50%;
 	display: inline-block;
+	float: left;
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
 
@@ -68,7 +75,6 @@ $banner-min-height: 400px;
 }
 
 .banner__latest-panel {
-	
 	z-index: 1000;
 	border-radius: 0;
 	border: 0;
@@ -81,6 +87,15 @@ $banner-min-height: 400px;
 	top: 0;
 	transition: opacity 1s ease-in-out 0.5s;
 
+	// Hide the panel when in small mode
+	@include breakpoint-max('sm') {
+		border-top: 8px solid $c4c-red;
+		box-shadow: 0;
+		margin-top: 0 !important;
+		position: relative;
+	}
+
+	// Fade in to 1 opacity when page loads
 	&--reveal {
 		opacity: 1;
 	}
@@ -91,6 +106,10 @@ $banner-min-height: 400px;
 		background: $c4c-red;
 		border-radius: 0;
 		color: #fff;
+
+		@include breakpoint-max('sm') {
+			display: none;
+		}
 
 		h2 {
 			line-height: 50px;

@@ -1,0 +1,12 @@
+.newsletter-sign-up {
+	.email-address {
+		background: #fff;
+		border: 0;
+		border-bottom: 4px solid $c4c-blue;
+		border-radius: 0;
+		color: $c4c-blue;
+	}
+	.email-address:focus {
+		box-shadow: 0;
+	}
+}

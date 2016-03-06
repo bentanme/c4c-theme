@@ -1,0 +1,40 @@
+.section-block,
+.section-block--black {
+	background: #000;
+	color: #fff;
+	display: block;
+	padding: 3em 0;
+	width: 100%;
+}
+.section-block--yellow {
+	background: $c4c-yellow;
+	color: #000;
+}
+.section-block--white {
+	background: #fff;
+	color: #333;
+}
+.section-block--red {
+	background: $c4c-red;
+	color: $c4c-yellow-light;
+}
+
+.section-block__shape,
+.section-block__shape--black {
+	background: url('../images/c4c-section-bg--black.svg') repeat-x 0 0;
+	display: block;
+	height: 15px;
+	margin-top: -15px;
+	position: relative;
+	width: 100%;
+	z-index: 1000;
+}
+.section-block__shape--yellow {
+	background-image: url('../images/c4c-section-bg--yellow.svg');
+}
+.section-block__shape--white {
+	background-image: url('../images/c4c-section-bg--white.svg');
+}
+.section-block__shape--red {
+	background-image: url('../images/c4c-section-bg--red.svg');
+}

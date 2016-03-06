@@ -32,7 +32,19 @@
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
 
-        // Make heights for banenr the same
+        // Make posts the same height
+        $('.post-grid__article').matchHeight();
+
+        $('.about-match-height').matchHeight();
+        $('.newsletter-match-height').matchHeight();
+
+        /**
+         *
+         * Latest post box
+         *
+         */
+
+        // Make heights for banner the same
         $('.match-height').matchHeight();
 
         // Centre the latest box
