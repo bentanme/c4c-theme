@@ -2,7 +2,10 @@
 
 .text-uppercase { text-transform: uppercase; }
 
-.text-fancy { font-family: $font-family-fancy; }
+.text-fancy {
+	font-family: $font-family-fancy;
+	line-height: 1.1em;
+}
 
 .text-bold,
 .text-strong { font-weight: 800; }
@@ -17,6 +20,7 @@
 .text-white { color: #fff; }
 .text-red { color: $c4c-red; }
 .text-yellow { color: $c4c-yellow; }
+.text-yellow-light { color: $c4c-yellow-light; }
 .text-blue { color: $c4c-blue; }
 .text-grey { color: $c4c-grey; }
 
@@ -44,7 +48,8 @@ h1, h2, h3, h4 {
 	&.text-fancy { letter-spacing: 0em;	}
 }
 
-.text-normal { @include flex-text(1.4rem); }
+.text-small { @include flex-text(1.4rem); }
+.text-normal { @include flex-text(1.6rem); }
 .text-medium { @include flex-text(1.8rem); }
 .text-large { @include flex-text(3rem); }
 .text-super { @include flex-text(4rem); }

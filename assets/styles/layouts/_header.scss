@@ -4,13 +4,21 @@
 		padding: 0.5em 0;
 		text-align: center;
 		transition: all 0.5s ease;
+
+		@include breakpoint-min('sm') { text-align: center; }
 	}
 	h1.logo img { height: 80px; }
 
 	// Make things tighter when we have a smaller screen
 
+	@include breakpoint-max('xs') {
+		h1.logo {
+			text-align: left;
+		}
+	}
+
 	@include breakpoint-max('sm') {
-		h1.logo { padding: 0.25em; }
+		h1.logo { padding: 0.25em 0; }
 		h1.logo img { max-height: 60px;	}
 	}
 }
@@ -18,13 +26,30 @@
 .navbar-c4c {
 	background: $c4c-yellow;
 }
+.navbar-toggle {
+	$navbar-toggle-height: 5rem;
+
+	border-radius: 0;
+	color: #000;
+	font-size: $navbar-toggle-height * 0.5;
+	height: $navbar-toggle-height;
+	line-height: $navbar-toggle-height;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 15px;
+	vertical-align: middle;
+	width: $navbar-toggle-height;
+}
+.navbar-toggle.collapsed {
+	color: $c4c-red;
+}
 .navbar-nav {
 	text-align: center;
 	float: none;
-
-	ul {
-		text-align: center;
-	}
+	margin: 0;
+	padding: 0;
 
 	li {
 		@extend .text-letter-spacing;
@@ -39,10 +64,27 @@
 	}
 
 	li a { color: #000; }
-	li a:hover {
+	li a:hover,
+	li a:focus {
 		text-decoration: none;
 		color: #fff;
 
 		@include text-shadow(1px);
+	}
+
+	// Menu design when in small size mode
+	@include breakpoint-max('xs') {
+		li {
+			font-size: 2.0rem;
+
+			display: block;
+			border-bottom: 1px solid darken($c4c-yellow, 10%);
+			padding: 0.5em 0;
+
+			a { display: block; }
+		}
+		li:last-child {
+			border-bottom: none;
+		}
 	}
 }

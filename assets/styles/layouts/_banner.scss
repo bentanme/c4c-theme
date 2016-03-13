@@ -21,9 +21,9 @@ $banner-min-height: 400px;
 .latest-posts-offset {
 	width: 100%;
 	height: $banner-min-height;
-	@include breakpoint-min('sm') { min-height: $banner-min-height * 1.1; }
-	@include breakpoint-min('md') { min-height: $banner-min-height * 1.4; }
-	@include breakpoint-min('lg') { min-height: $banner-min-height * 1.4; }
+	@include breakpoint-min('sm') { height: $banner-min-height * 1.1; }
+	@include breakpoint-min('md') { height: $banner-min-height * 1.4; }
+	@include breakpoint-min('lg') { height: $banner-min-height * 2; }
 }
 
 .banner {
@@ -56,7 +56,8 @@ $banner-min-height: 400px;
 
 	color: #fff;
 	font-family: $font-family-fancy;
-	margin: -0.5em 0 0 0;
+	line-height: 0.8em;
+	margin: 0 0 0.2em 0;
 
 }
 

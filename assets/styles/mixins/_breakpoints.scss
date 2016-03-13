@@ -16,7 +16,10 @@
 }
 
 @mixin breakpoint-max($point) {
-	@if $point == sm {
+	@if $point == xs {
+		@media (max-width: $screen-xs-max) { @content; }
+	}
+	@else if $point == sm {
 		@media (max-width: $screen-sm-max) { @content; }
 	}
 	@else if $point == md {

@@ -38,3 +38,8 @@
 .section-block__shape--red {
 	background-image: url('../images/c4c-section-bg--red.svg');
 }
+.section-block--newsletter {
+	background: url('../images/newsletter-bg.jpg') no-repeat;
+	background-size: cover;
+	background-position: 50% 0%;
+}

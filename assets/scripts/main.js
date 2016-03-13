@@ -47,12 +47,19 @@
         // Make heights for banner the same
         $('.match-height').matchHeight();
 
-        // Centre the latest box
-        var panel_el = $('.banner__latest-panel');
-        var panel_height = panel_el.height();
-        var banner_height = $('.banner').height();
+        // On page load
+        banner.centreLatestContent();
 
-        panel_el.css({'margin-top' : banner_height / 2 - panel_height / 2});
+        // On page resize
+        $(window).resize(function() {
+          console.log("Resizing");
+
+          // Update banner positioning
+          banner.centreLatestContent();
+
+          // Update match height
+          $.fn.matchHeight._update()
+        });
 
         $('.banner').addClass('banner--reveal');
         $('.banner__latest-panel').addClass('banner__latest-panel--reveal');

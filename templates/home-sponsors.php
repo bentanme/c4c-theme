@@ -11,7 +11,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 padding--lg padding-sm--sm text-center">
-				<h2 class="text-thin text-grey m-b-30 first">A big thanks to all our partners</h2>
+				<!-- <h2 class="text-thin text-grey m-b-30 first">A big thanks to all our partners</h2> -->
+				<h2 class="text-thin text-grey m-b-20 first">
+					<img src="<?= get_bloginfo('template_url'); ?>/dist/images/c4c-our-sponsors.svg" alt="Our partners" class="img-responsive img-responsive-center">
+				</h2>
 				<ul class="inline-block no-bullets sponsors">
 					<li><a href="http://www.countdown.co.nz" target="_blank"><img src="<?= get_bloginfo('template_url'); ?>/dist/images/sponsors/sponsors_countdown.png" alt="Countdown"></a></li>
 					<li><a href="http://www.silverfernfarms.com" target="_blank"><img src="<?= get_bloginfo('template_url') ?>/dist/images/sponsors/sponsors_silver-fern-farms.png" alt="Silver Fern Farms"></a></li>

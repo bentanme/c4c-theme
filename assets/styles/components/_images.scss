@@ -3,3 +3,10 @@
 	margin-left: auto !important;
 	margin-right: auto !important;
 }
+
+.img-responsive-center--sm {
+	@include breakpoint-max('sm') {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
