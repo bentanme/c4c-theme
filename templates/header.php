@@ -23,6 +23,7 @@
           <li><a href="#">Diary</a></li>
           <li><a href="#">Our story</a></li>
           <li><a href="#">Recipes</a></li>
+          <li><a href="#">Hotspots</a></li>
           <li><a href="#">Videos</a></li>
           <li><a href="#"><i class="fi-shopping-cart p-r-5"></i> Shop</a></li>
         </ul>

@@ -1,4 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
+
+<?php get_template_part('templates/banner-title'); ?>
+
   <article <?php post_class(); ?>>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>

@@ -4,19 +4,22 @@
 
 // Social media icons at bottom of page
 .social-media {
-	@include flex-text(1.8em);
+	$icon-size: 1.6em;
+
+	@include flex-text($icon-size);
 
 	// Padding between icons
-	li { padding: 0 0.4em; }
+	li { padding: 0 0.2em; text-align: center; }
 
 	a {
 		color: #fff;
 		display: inline-block;
-		height: 1.4em;
-		line-height: 1.4em;
+		height: $icon-size;
+		line-height: $icon-size;
 		vertical-align: middle;
-		width: 1.4em;
+		width: $icon-size;
 		border-radius: 9999px;
+		transition: all 0.2s ease-in-out;
 	}
 	a:hover,
 	a:focus {
@@ -30,10 +33,16 @@
 	.social-twitter 	{ background: $company-twitter; }
 }
 
+.social-media--footer {
+}
+
 .footer-menu {
+	@extend .text-tiny;
 	@extend .text-uppercase;
 	@extend .text-bold;
 	@extend .text-letter-spacing;
+	@extend .inline-block;
+	@extend .no-bullets;
 
 	a { color: #555; text-decoration: none; }
 	a:hover { color: #999; }

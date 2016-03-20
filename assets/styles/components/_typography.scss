@@ -1,4 +1,5 @@
-.text-letter-spacing { letter-spacing: .1em; }
+.text-letter-spacing { letter-spacing: .15em; }
+.text-letter-spacing--sm { letter-spacing: .1em; }
 
 .text-uppercase { text-transform: uppercase; }
 
@@ -18,23 +19,53 @@
 // Text coloring
 
 .text-white { color: #fff; }
+.text-black { color: #000; }
 .text-red { color: $c4c-red; }
 .text-yellow { color: $c4c-yellow; }
 .text-yellow-light { color: $c4c-yellow-light; }
 .text-blue { color: $c4c-blue; }
+.text-blue-dark { color: desaturate(darken($c4c-blue, 30%), 40%); }
 .text-grey { color: $c4c-grey; }
+
+// Text highlight
+
+.highlight {
+	background: rgba($c4c-yellow-light, 0.3);
+	padding: 0 0.2em;
+
+	&--blue {
+		background: rgba($c4c-blue, 0.3);
+	}
+}
+
+// Font sizing
+
+.text-tiny { @include flex-text(modular-scale(-2)); }
+.text-small { @include flex-text(modular-scale(-1)); }
+.text-normal { @include flex-text(modular-scale(0)); }
+.text-medium { @include flex-text(modular-scale(1)); }
+.text-large { @include flex-text(modular-scale(2)); }
+.text-super { @include flex-text(modular-scale(3)); }
+
+// Little title
+.title-little {
+	@extend .text-strong;
+	@extend .text-letter-spacing;
+	@extend .text-uppercase;
+	@extend .text-tiny;
+}
 
 // A small arrow displayed after content denoting an action
 
 .action-arrow--after:after,
 .action-arrow:after {
-	content: "\203A";
-	padding-left: 0.3em;
+	content: "\2192";
+	padding-left: 0.5em;
 }
 
 .action-arrow--before:before {
 	content: "\2039";
-	padding-right: 0.3em;
+	padding-right: 0.5em;
 }
 
 // Remove top margin when first element
@@ -47,12 +78,6 @@ h1, h2, h3, h4 {
 
 	&.text-fancy { letter-spacing: 0em;	}
 }
-
-.text-small { @include flex-text(1.4rem); }
-.text-normal { @include flex-text(1.6rem); }
-.text-medium { @include flex-text(1.8rem); }
-.text-large { @include flex-text(3rem); }
-.text-super { @include flex-text(4rem); }
 
 // List styling
 

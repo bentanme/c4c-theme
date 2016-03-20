@@ -1,0 +1,54 @@
+/**
+ *
+ * Charities section found on homepage
+ *
+ */
+
+.charities {}
+
+.charities__group {
+	padding: 30px 0;
+	display: inline-block;
+
+	@include breakpoint-max('xs') {
+		padding: 0 0 20px;
+	}
+}
+
+.charities__description {
+	@include make-xs-column(12);
+	@include make-sm-column(6);
+	@include make-md-column(3);
+
+	@extend .text-thin;
+	@extend .text-normal;
+
+	@include breakpoint-max('xs') {
+		@extend .padding--sm;
+	}
+}
+
+.charities__description:after {
+	@include breakpoint-max('xs') {
+		border-bottom: 1px solid lighten($c4c-grey, 20%);
+		content: "";
+		display: block;
+		height: 1px;
+		margin: 3em auto 0;
+		width: 100px;
+	}
+}
+.charities__description:last-child:after {
+	display: none;
+}
+
+.charities__description__content {
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.charities__logo {
+	max-height: 80px;
+	opacity: 0.5;
+	margin-bottom: 0.5em;
+}

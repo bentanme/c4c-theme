@@ -20,8 +20,9 @@
 			<div class="col-md-6 about-match-height">
 				<div class="vertically--parent about-match-height text-center--sm padding-sm--sm">
 					<div class="vertically--child">
+						<p class="title-little">About the cause</p>
 						<h1 class="text-fancy text-super first m-b-0 text-center--sm">
-							<img src="<?= get_bloginfo('template_url') ?>/assets/images/c4c-about.svg" alt="About" class="img-responsive img-responsive-center--sm" style="max-height:80px">
+							Cooking 4 Change
 						</h1>
 
 						<div class="text-normal text-thin padding--sm">
@@ -31,7 +32,7 @@
 						</div>
 
 						<!-- Link to about page -->
-						<p><a href="" class="btn btn-submit btn-primary btn-rounded action-arrow">And so it began</a></p>
+						<p><a href="" class="btn btn-submit btn-primary btn-rounded">And so it began</a></p>
 					</div>
 				</div>
 			</div>

@@ -22,12 +22,16 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+        $('.newsletter-match-height').matchHeight();
+        $('.post-grid__article').matchHeight();
       }
     },
     // Home page
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
+        banner.centreLatestContent();
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
@@ -36,7 +40,6 @@
         $('.post-grid__article').matchHeight();
 
         $('.about-match-height').matchHeight();
-        $('.newsletter-match-height').matchHeight();
 
         /**
          *
@@ -46,9 +49,7 @@
 
         // Make heights for banner the same
         $('.match-height').matchHeight();
-
-        // On page load
-        banner.centreLatestContent();
+        $('.post-grid__article__box').matchHeight();
 
         // On page resize
         $(window).resize(function() {
@@ -58,7 +59,7 @@
           banner.centreLatestContent();
 
           // Update match height
-          $.fn.matchHeight._update()
+          $.fn.matchHeight._update();
         });
 
         $('.banner').addClass('banner--reveal');

@@ -13,7 +13,7 @@
 						<p class="banner__description text-center--sm">Delicious warm and blue</p>
 						<!-- Article CTA -->
 						<p class="p-t-10 text-center--sm box-shadow">
-							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary action-arrow--after">See more</a>
+							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary">See more</a>
 						</p>
 					</div>
 				</div>
@@ -29,7 +29,7 @@
 						<h1 class="banner__header text-center--sm text-fancy">Lemon curd pie</h1>
 						<p class="banner__description text-center--sm">Lemony and curdy</p>
 						<p class="p-t-10 text-center--sm box-shadow">
-							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary action-arrow--after">See more</a>
+							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary">See more</a>
 						</p>
 					</div>
 				</div>
@@ -45,7 +45,7 @@
 						<h1 class="banner__header text-center--sm text-fancy">Ostrich on toast</h1>
 						<p class="banner__description text-center--sm">Ostrich with a bready twist</p>
 						<p class="p-t-10 text-center--sm box-shadow">
-							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary action-arrow--after">See more</a>
+							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary">See more</a>
 						</p>
 					</div>
 				</div>

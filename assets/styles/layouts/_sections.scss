@@ -8,7 +8,7 @@
 }
 .section-block--yellow {
 	background: $c4c-yellow;
-	color: #000;
+	color: darken($c4c-yellow, 35%);
 }
 .section-block--white {
 	background: #fff;
@@ -17,6 +17,10 @@
 .section-block--red {
 	background: $c4c-red;
 	color: $c4c-yellow-light;
+}
+.section-block--blue {
+	background: $c4c-blue;
+	color: darken($c4c-blue, 30%);
 }
 
 .section-block__shape,
@@ -39,7 +43,20 @@
 	background-image: url('../images/c4c-section-bg--red.svg');
 }
 .section-block--newsletter {
-	background: url('../images/newsletter-bg.jpg') no-repeat;
+	@extend .section-block--red;
+
+	// background: url('../images/newsletter-bg-2.jpg') no-repeat;
+	// background: url('../images/newsletter-bg.svg') no-repeat 0 100% $c4c-red;
 	background-size: cover;
-	background-position: 50% 0%;
+
+	// Fix layering for little email icon
+	position: relative;
+	z-index: 1;
 }
+.section-block--sponsors {
+	background: url('../images/pie-bg.jpg') no-repeat 0 100% #fff;
+	background-size: cover;
+}
+
+.section-block--border-top { border-top: 1px solid lighten($c4c-grey, 25%); }
+.section-block--border-bottom { border-bottom: 1px solid lighten($c4c-grey, 25%); }
