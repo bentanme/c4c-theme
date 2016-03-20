@@ -12,7 +12,7 @@
 		<div class="row">
 			<div class="col-md-12 padding--md">
 				<div class="text-center">
-					<h1 class="text-fancy text-super text-blue-dark first">Mouth-watering entries</h1>
+					<h1 class="text-fancy text-blue-dark first">Mouth-watering entries</h1>
 					<p class="text-grey title-little">Straight from the oven</p>
 				</div>
 

@@ -17,7 +17,7 @@
 			<div class="description">
 				<h2>Ostrich on toast</h2>
 				<p>Ostrich with a bready twist. Let's see what happens when text gets really long</p>
-				<p class="tags"><i class="fi-price-tag m-r-5"></i> Food, Dinner, Vegetarian</p>
+				<div class="description__tags"><i class="fi-price-tag m-r-5"></i> Food, Dinner, Vegetarian</div>
 			</div>
 		</div>
 	</div>

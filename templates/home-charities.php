@@ -14,7 +14,7 @@
 		<div class="row">
 
 			<div class="col-md-12">
-				<h1 class="text-fancy text-super first text-center--sm text-blue-dark">
+				<h1 class="text-fancy first text-blue-dark">
 					Our charities
 				</h1>
 				<p class="title-little text-grey">Supporting those doing good</p>

@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 padding--lg padding-sm--sm text-center">
-				<h2 class="text-thin text-fancy text-blue-dark text-super first">Our partners</h2>
+				<h1 class="text-fancy text-blue-dark">Our partners</h1>
 				<p class="text-grey title-little">Helping to wash the dishes</p>
 
 				<ul class="inline-block no-bullets sponsors m-t-30">

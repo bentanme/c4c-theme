@@ -1,0 +1,47 @@
+/**
+ *
+ * Styling for post stuff
+ *
+ */
+
+.post__content {
+
+	img { @extend .img-responsive; }
+	h1, h2, h3, h4 {
+		@extend .text-blue-dark;
+		@extend .text-strong;
+		@extend .text-serif;
+
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+	}
+
+	ul { margin: 1em 0; }
+
+	blockquote {
+		@extend .text-large;
+		@extend .text-serif;
+
+		color: $c4c-grey-dark;
+		border-color: $c4c-blue;
+	}
+
+	// Used for recipe section
+	pre {
+		@extend .ripped-paper;
+	}
+
+	// Drop caps to fancy things up, only target direct descendants
+	& > p:first-child:first-letter {
+		@extend .text-blue-dark;
+		@extend .text-strong;
+		@extend .text-serif;
+		@extend .text-jumbo;
+
+		float: left;
+		line-height: 1em;
+		// vertical-align: middle;
+		padding-right: 0.1em;
+	}
+
+}

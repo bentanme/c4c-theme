@@ -2,17 +2,17 @@
 
 <?php get_template_part('templates/banner-title'); ?>
 
-  <article <?php post_class(); ?>>
-    <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
-    </header>
-    <div class="entry-content">
+<div class="container">
+  <div class="post row">
+    <article class="post__content match-height">
       <?php the_content(); ?>
-    </div>
-    <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
-    </footer>
-    <?php comments_template('/templates/comments.php'); ?>
-  </article>
+    </article>
+    <div class="post__sidebar match-height">
+		<?php get_template_part('templates/sidebar'); ?>
+    </div>
+  </div>
+</div>
+
+  <article <?php post_class(); ?>>
 <?php endwhile; ?>

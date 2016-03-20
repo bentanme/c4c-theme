@@ -1,4 +1,4 @@
-@mixin text-shadow($intensity, $opacity: 0.3)
+@mixin text-shadow($intensity, $opacity: 0.3, $color: 0)
 {
-	text-shadow: 0 $intensity $intensity * 1.1 rgba(0,0,0, $opacity);
+	text-shadow: 0 $intensity $intensity * 1.1 rgba($color, $color, $color, $opacity);
 }

@@ -55,7 +55,7 @@
 		@extend .text-letter-spacing;
 		@extend .text-uppercase;
 		@extend .text-strong;
-		@include flex-text(14px);
+		@extend .text-normal;
 
 		list-style: none;
 		float: none;
@@ -75,7 +75,8 @@
 	// Menu design when in small size mode
 	@include breakpoint-max('xs') {
 		li {
-			font-size: 2.0rem;
+			// @extend .text-medium;
+			@include flex-text(1);
 
 			display: block;
 			border-bottom: 1px solid darken($c4c-yellow, 10%);

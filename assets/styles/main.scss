@@ -1,14 +1,15 @@
 // Import Bourbon easy SCSS
+// Required first as there is a dependency inside variables.scss, and variables
+// needs to run before the main bootstrap stuff
+// 
 // bourbon:scss
 @import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
-// endbourbon
 
 @import "common/variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
 
 @import "mixins/breakpoints";
 @import "mixins/button-color";
@@ -21,14 +22,17 @@
 @import "components/buttons";
 @import "components/caret";
 @import "components/carousel";
+@import "components/charities";
 @import "components/comments";
 @import "components/forms";
 @import "components/grid";
 @import "components/helpers";
 @import "components/images";
 @import "components/padding";
+@import "components/posts";
+@import "components/ripped-paper";
+@import "components/social-media";
 @import "components/sponsors";
-@import "components/charities";
 @import "components/typography";
 @import "components/vertical-align";
 @import "components/wp-classes";

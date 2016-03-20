@@ -3,7 +3,7 @@
 	@extend .text-uppercase;
 
 	letter-spacing: 0.0em;
-	padding: 0.8em 2em 1em;
+	padding: 0.8em 2em 1.2em;
 	font-weight: 800;
 	border: 0;
 	transition: all 0.3s ease-in-out;
@@ -12,7 +12,7 @@
 
 .btn-round,
 .btn-rounded {
-	border-radius: 9999px;
+	border-radius: 5px;
 }
 
 // Button active

@@ -15,7 +15,7 @@
 			<div class="description">
 				<h2>Lemon curd pie</h2>
 				<p>Lemony and curdy</p>
-				<p class="tags"><i class="fi-price-tag m-r-5"></i> Food, Dinner, Vegetarian</p>
+				<div class="description__tags"><i class="fi-price-tag m-r-5"></i> Food, Dinner, Vegetarian</div>
 			</div>
 		</div>
 	</div>

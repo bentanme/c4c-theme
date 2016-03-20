@@ -22,8 +22,8 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
-        $('.newsletter-match-height').matchHeight();
         $('.post-grid__article').matchHeight();
+        $('.match-height').matchHeight();
       }
     },
     // Home page
@@ -39,17 +39,11 @@
         // Make posts the same height
         $('.post-grid__article').matchHeight();
 
-        $('.about-match-height').matchHeight();
-
         /**
          *
          * Latest post box
          *
          */
-
-        // Make heights for banner the same
-        $('.match-height').matchHeight();
-        $('.post-grid__article__box').matchHeight();
 
         // On page resize
         $(window).resize(function() {

@@ -1,21 +1,21 @@
 @mixin flex-text($font-size) {
 
-	font-size: $font-size * 0.9;
+	font-size: modular-scale($font-size) * 0.8;
 
 	@media screen and (min-width: $screen-xs-min) {
-		font-size: $font-size * 0.9;
+		font-size: modular-scale($font-size) * 0.8;
 	}
 
 	@media screen and (min-width: $screen-sm-min) {
-		font-size: $font-size * 0.9;
+		font-size: modular-scale($font-size) * 0.9;
 	}
 
 	@media screen and (min-width: $screen-md-min) {
-		font-size: $font-size;
+		font-size: modular-scale($font-size);
 	}
 
 	@media screen and (min-width: $screen-lg-min) {
-		font-size: $font-size * 1.1;
+		font-size: modular-scale($font-size) * 1.05;
 	}
 
 }

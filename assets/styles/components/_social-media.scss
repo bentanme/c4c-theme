@@ -1,0 +1,33 @@
+// Social media icons at bottom of page
+.social-media {
+	$icon-size: 1.6em;
+
+	@include flex-text(1.2);
+
+	// Padding between icons
+	li { padding: 0 0.2em; text-align: center; }
+
+	a {
+		color: #fff;
+		display: inline-block;
+		height: $icon-size;
+		line-height: $icon-size;
+		vertical-align: middle;
+		width: $icon-size;
+		border-radius: 9999px;
+		transition: all 0.2s ease-in-out;
+	}
+	a:hover,
+	a:focus {
+		opacity: 0.8;
+	}
+
+	// Social different colours
+	.social-facebook 	{ background: $company-facebook; }
+	.social-youtube 	{ background: $company-youtube; }
+	.social-instagram 	{ background: $company-instagram; }
+	.social-twitter 	{ background: $company-twitter; }
+}
+
+.social-media--footer {
+}

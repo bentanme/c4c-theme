@@ -1,4 +1,7 @@
 .newsletter-sign-up {
+
+	.form-group { display: inline-block; }
+
 	.email-address {
 		@extend .text-thin;
 
@@ -7,6 +10,10 @@
 		border-bottom: 4px solid $c4c-blue;
 		border-radius: 0;
 		color: $c4c-blue;
+
+		@include breakpoint-max('xs') {
+			display: inline-block;
+		}
 	}
 	.email-address:focus {
 		box-shadow: none !important;

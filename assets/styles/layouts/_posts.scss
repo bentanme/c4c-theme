@@ -1,0 +1,45 @@
+.post {
+	@extend .text-medium;
+	@extend .text-thin;
+}
+
+.post__content {
+	@include make-md-column(8, 80px);
+
+	@extend .padding--lg;
+}
+
+.post__sidebar {
+	@extend .padding--lg;
+	color: darken($c4c-grey, 20%);
+
+	@include make-md-column(4, 80px);
+	@include breakpoint-min('md') {
+		border-left: 1px solid $c4c-grey-light;
+	}
+
+	h1, h2, h3, h4 {
+		@extend .text-blue-dark;
+	}
+
+	a { color: $c4c-blue; }
+	a:hover, a:focus { color: darken($c4c-blue, 20%); }
+}
+
+.post__sidebar__content {
+
+}
+
+.post__sidebar__section {
+	padding: 2em 0;
+	border-bottom: 1px solid $c4c-grey-light;
+}
+
+.post__sidebar__section:first-child { padding-top: 0; }
+.post__sidebar__section:last-child { padding-bottom: 0; border-bottom: none; }
+
+// Different section modules
+
+.post__sidebar__latest {
+	@extend .text-normal;
+}

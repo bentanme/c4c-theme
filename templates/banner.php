@@ -8,7 +8,7 @@
 				<div class="vertically--child">
 					<div class="container">
 						<!-- Article title -->
-						<h1 class="banner__header text-center--sm text-fancy">Blueberry muffins</h1>
+						<h1 class="banner__header text-center--sm">Blueberry muffins</h1>
 						<!-- Article excerpt -->
 						<p class="banner__description text-center--sm">Delicious warm and blue</p>
 						<!-- Article CTA -->
@@ -26,7 +26,7 @@
 			<div class="banner__overlay vertically--parent">
 				<div class="vertically--child">
 					<div class="container">
-						<h1 class="banner__header text-center--sm text-fancy">Lemon curd pie</h1>
+						<h1 class="banner__header text-center--sm">Lemon curd pie</h1>
 						<p class="banner__description text-center--sm">Lemony and curdy</p>
 						<p class="p-t-10 text-center--sm box-shadow">
 							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary">See more</a>
@@ -42,7 +42,7 @@
 			<div class="banner__overlay vertically--parent">
 				<div class="vertically--child">
 					<div class="container">
-						<h1 class="banner__header text-center--sm text-fancy">Ostrich on toast</h1>
+						<h1 class="banner__header text-center--sm">Ostrich on toast</h1>
 						<p class="banner__description text-center--sm">Ostrich with a bready twist</p>
 						<p class="p-t-10 text-center--sm box-shadow">
 							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary">See more</a>
@@ -58,7 +58,7 @@
 		<div class="panel-heading">
 			<h2 class="text-bold m-t-0 m-b-0 text-fancy">The latest</h2></span>
 		</div>
-		<div class="panel-body">
+		<div class="panel-body latest-panel">
 			<ul>
 				<!--
 				Item 1:

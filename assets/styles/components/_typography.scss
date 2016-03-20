@@ -3,15 +3,28 @@
 
 .text-uppercase { text-transform: uppercase; }
 
+// Font family stuff
+
 .text-fancy {
 	font-family: $font-family-fancy;
 	line-height: 1.1em;
 }
+.text-serif {
+	@include font-feature-settings("kern" true);
+	font-family: $font-family-serif;
+	letter-spacing: -0.02em;
+}
+.text-san-serif {
+	font-family: $font-family-sans-serif;
+}
+
+// Text formatting
 
 .text-bold,
 .text-strong { font-weight: 800; }
 .text-thin { font-weight: 300; }
 .text-shadow { @include text-shadow(2px); }
+.text-italic { font-style: italic; }
 
 .text-center--sm { @include breakpoint-max('sm') { text-align: center; } }
 .text-center--md { @include breakpoint-max('md') { text-align: center; } }
@@ -40,19 +53,35 @@
 
 // Font sizing
 
-.text-tiny { @include flex-text(modular-scale(-2)); }
-.text-small { @include flex-text(modular-scale(-1)); }
-.text-normal { @include flex-text(modular-scale(0)); }
-.text-medium { @include flex-text(modular-scale(1)); }
-.text-large { @include flex-text(modular-scale(2)); }
-.text-super { @include flex-text(modular-scale(3)); }
+.text-tiny { @include flex-text(-2); }
+.text-small { @include flex-text(-1); }
+.text-normal { @include flex-text(0); }
+.text-medium { @include flex-text(1); }
+.text-large { @include flex-text(2); }
+.text-super { @include flex-text(3); }
+.text-jumbo { @include flex-text(4); }
+.text-wtf { @include flex-text(5); }
 
 // Little title
 .title-little {
 	@extend .text-strong;
 	@extend .text-letter-spacing;
 	@extend .text-uppercase;
-	@extend .text-tiny;
+	@extend .text-normal;
+}
+
+// Heading sizes and styling
+
+h1 { @include flex-text(4); }
+h2 { @include flex-text(3); }
+h3 { @include flex-text(2); }
+h4 { @include flex-text(1); }
+
+// Fix kerning
+h1, h2, h3 {
+	letter-spacing: -0.04em;
+
+	&.text-fancy { letter-spacing: 0em;	}
 }
 
 // A small arrow displayed after content denoting an action
@@ -69,15 +98,9 @@
 }
 
 // Remove top margin when first element
+
 .first { margin-top: 0 !important; }
 .last { margin-bottom: 0 !important; }
-
-// Fix kerning
-h1, h2, h3, h4 {
-	letter-spacing: -0.04em;
-
-	&.text-fancy { letter-spacing: 0em;	}
-}
 
 // List styling
 

@@ -10,32 +10,49 @@
 }
 .aligncenter {
   display: block;
-  margin: ($line-height-computed / 2) auto;
+  margin: ($line-height-computed / 2 * 2) auto;
   height: auto;
 }
 .alignleft,
 .alignright {
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: ($line-height-computed / 2 * 2);
   height: auto;
 }
 @media (min-width: $screen-sm-min) {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
-    margin-right: ($line-height-computed / 2);
+    margin-right: ($line-height-computed / 2 * 2);
   }
   .alignright {
     float: right;
-    margin-left: ($line-height-computed / 2);
+    margin-left: ($line-height-computed / 2 * 2);
   }
 }
 
 // Captions
 .wp-caption {
-  @extend .thumbnail;
+  // @extend .thumbnail;
+
+  @extend .img-responsive;
+  border-bottom: 1px solid $c4c-grey-light;
 }
 .wp-caption-text {
-  padding: $thumbnail-caption-padding;
+  // padding: $thumbnail-caption-padding;
+  @extend .text-italic;
+  @extend .text-serif;
+  // @extend .text-normal;
+  @extend .text-grey;
+
+  padding: 1em 0;
+
+  &:before {
+    content: "Above\: ";
+    @extend .text-blue-dark;
+    @extend .text-strong;
+
+    font-style: normal;
+  }
 }
 
 // Text meant only for screen readers

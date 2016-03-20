@@ -46,7 +46,6 @@ a .post-grid__article {
 			max-width: 300px;
 		}
 	}
-	// background: url('../images/c4c-section-bg--black.svg') repeat-x 0 0;
 
 	// Hero image
 	.hero-image {
@@ -72,22 +71,21 @@ a .post-grid__article {
 		h2 {
 			@extend .text-strong;
 			@extend .text-red;
-			@include flex-text(1.2em);
+			@include flex-text(1);
 			transition: all .2s ease-in-out;
 		}
 
 		p {
 			color: darken($c4c-grey, 20%);
-			@include flex-text(1em);
+			@include flex-text(0);
 			transition: all .2s ease-in-out;
 		}
 
 		// Categories / tags
-		p.tags {
+		.description__tags {
 			border-top: 1px solid lighten($c4c-grey, 20%);
 			padding-top: 1em;
 			color: $c4c-grey;
-			@include flex-text(0.8em);
 		}
 
 	}

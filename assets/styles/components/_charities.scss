@@ -21,7 +21,7 @@
 	@include make-md-column(3);
 
 	@extend .text-thin;
-	@extend .text-normal;
+	@extend .text-medium;
 
 	@include breakpoint-max('xs') {
 		@extend .padding--sm;
@@ -48,7 +48,7 @@
 }
 
 .charities__logo {
-	max-height: 80px;
+	max-height: 100px;
 	opacity: 0.5;
 	margin-bottom: 0.5em;
 }
