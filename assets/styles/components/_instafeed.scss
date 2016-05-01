@@ -1,0 +1,22 @@
+.instafeed {
+}
+
+.instafeed__item {
+	color: white;
+	@include make-xs-column(4, 0);
+	@include make-sm-column(4, 0);
+	@include make-md-column(2, 0);
+	@include make-lg-column(2, 0);
+}
+
+.instafeed__item:active,
+.instafeed__item:hover {
+	text-decoration: none;
+	color: rgba(white, 0.8);
+	opacity: 0.5;
+	transition: all 0.3s;
+}
+
+.instafeed__item--link { background: $c4c-blue; }
+.instafeed__item--link:active,
+.instafeed__item--link:hover { background: $c4c-blue-dark; opacity: 1; }

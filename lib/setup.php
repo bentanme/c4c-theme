@@ -27,7 +27,8 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage')
+    'primary_navigation' => __('Primary Navigation', 'sage'),
+    'footer_navigation' => __('Footer Navigation', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -102,7 +103,7 @@ function assets() {
 
   wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
   wp_enqueue_style('foundation-icons/css', Assets\asset_path('fonts/foundation-icons.css'), false, null);
-  wp_enqueue_style('google-fonts/css', 'https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Open+Sans:400,700,300|Satisfy', false, null);
+  wp_enqueue_style('google-fonts/css', 'https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Open+Sans:400,700,300|Satisfy|Gloria+Hallelujah', false, null);
 
   /*=====  End of Styles  ======*/
 
@@ -116,6 +117,7 @@ function assets() {
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
   wp_enqueue_script('matchHeight', Assets\asset_path('scripts/matchHeight.js'), ['jquery'], null, true);
+  wp_enqueue_script('instafeed', Assets\asset_path('scripts/instafeed.js'), ['jquery'], null, true);
 
   /*=====  End of JS scripts  ======*/
 

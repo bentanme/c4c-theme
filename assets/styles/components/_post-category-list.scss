@@ -1,0 +1,14 @@
+.post__category-list {
+	display: inline-block;
+	padding: 1em 1.5em;
+	margin-top: 3em;
+	background: $c4c-red;
+	border-radius: $border-radius-base;
+	color: darken($c4c-red, 30%);
+
+	a { color: #fff; }
+
+	ul { display: inline-block; }
+	ul li:after { content: ", "; }
+	ul li:last-child:after { content: ""; }
+}

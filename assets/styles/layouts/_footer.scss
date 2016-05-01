@@ -1,6 +1,8 @@
+$footer-text-color: #777;
+
 .footer {
 	@extend .text-normal;
-	color: #555;
+	color: $footer-text-color;
 }
 
 .footer-menu {
@@ -10,13 +12,17 @@
 	@extend .inline-block;
 	@extend .no-bullets;
 
-	a { color: #555; text-decoration: none; }
-	a:hover { color: #999; }
+	a { 
+		color: $footer-text-color; 
+		text-decoration: none; 
+		margin: 0 0.5em;
+	}
+	a:hover { color: lighten($footer-text-color, 20%); }
 
 	li:after {
-		content: "•";
-		padding: 0 1em 0 1.3em;
-		color: #333;
+		// content: "•";
+		// padding: 0 1em 0 1.3em;
+		color: darken($footer-text-color, 20%);
 	}
 
 	li:last-child:after {

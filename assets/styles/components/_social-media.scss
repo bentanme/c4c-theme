@@ -2,6 +2,7 @@
 .social-media {
 	$icon-size: 1.6em;
 
+	@extend .inline-block, .no-bullets;
 	@include flex-text(1.2);
 
 	// Padding between icons
@@ -23,11 +24,17 @@
 	}
 
 	// Social different colours
-	.social-facebook 	{ background: $company-facebook; }
-	.social-youtube 	{ background: $company-youtube; }
-	.social-instagram 	{ background: $company-instagram; }
-	.social-twitter 	{ background: $company-twitter; }
+	.social-facebook 	{ background: desaturate($company-facebook, 20%); }
+	.social-youtube 	{ background: desaturate($company-youtube, 20%); }
+	.social-instagram 	{ background: desaturate($company-instagram, 20%); }
+	.social-twitter 	{ background: desaturate($company-twitter, 20%); }
+	.social-c4c 		{ background: desaturate($c4c-blue, 0%); }
 }
 
+.social-media--header {
+	@include breakpoint-max('sm') {
+		display: none !important;
+	}
+}
 .social-media--footer {
 }

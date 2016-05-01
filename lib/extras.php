@@ -28,6 +28,24 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+  return ' &hellip;';
+  // return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+/**
+ * Custom background image alignment function
+ * returns the correct class
+ */
+function featured_image_position($post_id) {
+  $featured_image_position = get_post_custom_values('featured_image_position', $post_id)[0];
+
+  if(empty($featured_image_position))
+    return null;
+
+  $output = "background-position--";
+  $output .= $featured_image_position;
+
+  return $output;
+}
+add_filter('featured_image_position', __NAMESPACE__ . '\\featured_image_position');

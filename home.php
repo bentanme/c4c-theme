@@ -13,8 +13,9 @@ use Roots\Sage\Assets;
 	get_template_part('templates/post-grid');
 	get_template_part('templates/newsletter-sign-up');
 	get_template_part('templates/home-about');
-	get_template_part('templates/home-charities');
-	get_template_part('templates/home-sponsors');
+	// get_template_part('templates/home-charities');
+	get_template_part('templates/home-instagram');
+	get_template_part('templates/home-partners');
 
 	wp_enqueue_script('responsive-bootstrap-toolkit', Assets\asset_path('scripts/responsive-bootstrap-toolkit.js'), ['jquery'], null, true);
 	wp_enqueue_script('home', Assets\asset_path('scripts/home.js'), ['jquery', 'responsive-bootstrap-toolkit'], null, true);

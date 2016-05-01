@@ -1,0 +1,11 @@
+.rotate-180 {
+	@include animation(rotate-180 2s ease-in-out 1s forwards);
+}
+
+@include keyframes(rotate-180) {
+	0% { @include transform(translate(0, 20px)); }
+	10% { @include transform(translate(0, -20px)); }
+	20% { @include transform(translate(0, 20px)); }
+	30% { @include transform(translate(0, -20px)); }
+	40% { @include transform(translate(0, 0)); }
+}

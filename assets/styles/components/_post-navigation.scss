@@ -1,0 +1,110 @@
+/**
+ *
+ * Styling for post navigation at bottom of page
+ *
+ */
+
+$post-navigation-height: 200px;
+
+.post__navigation {
+	@extend .container-fluid;
+	@extend .section-block--topographic;
+
+	background: #fff;
+	border-top: 1px solid $c4c-grey-light;
+
+	a,
+	a:hover {
+		text-decoration: none;
+		color: #fff;
+		@include text-shadow(1px);
+	}
+}
+
+// Common
+.post__navigation__right,
+.post__navigation__left {
+	@include make-sm-column(6, 0);
+	@include make-xs-column(12, 0);
+
+	background-color: #eee;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: $post-navigation-height;
+
+	// Force centered text when in mobile mode
+	@include breakpoint-max('sm') {
+		text-align: center !important;
+	}
+}
+
+// Left-right label
+.post__navigation__label {
+	@extend .title-little, .text-yellow;
+	padding-bottom: 0.5em;
+}
+
+// Left
+.post__navigation__left {
+	// Only have line in larger than mobile mode
+	// @include breakpoint-min('sm') { border-right: 1px solid white; }
+
+	text-align: left;
+	background-color: #000;
+}
+
+// Right
+.post__navigation__right {
+	text-align: right;
+	background-color: #000;
+}
+
+.post__navigation__title {
+	@extend .text-fancy;
+	@extend .text-super;
+}
+
+.post__navigation__overlay {
+	min-height: $post-navigation-height;
+	background: rgba(0, 0, 0, 0.3);
+	transition: background ease-in-out 0.2s;
+	padding: 0 2em;
+}
+
+// On hover
+a:hover .post__navigation__overlay {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+// Styling the official Wordpress post navigation
+.posts-navigation {
+	@extend .container-fluid;
+}
+.nav-links {
+	@extend .row;
+	@extend .text-center;
+	@extend .text-super;
+	margin-bottom: 3em;
+	color: lighten($c4c-grey, 10%);
+}
+.nav-next,
+.nav-previous {
+	@extend .text-fancy;
+	display: inline-block;
+
+	a { text-decoration: none; }
+}
+.nav-next:after {
+	content: "\203A"; // >
+	padding-left: 0.5em;
+	font-family: $font-family-sans-serif;
+}
+.nav-previous:before {
+	content: "\2039"; // <
+	padding-right: 0.5em;
+	font-family: $font-family-sans-serif;
+}
+.nav-separator {
+	display: inline-block;
+	padding: 0 0.5em;
+}

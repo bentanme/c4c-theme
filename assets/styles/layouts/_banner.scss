@@ -20,10 +20,10 @@ $banner-min-height: 400px;
 .banner__overlay,
 .latest-posts-offset {
 	width: 100%;
-	height: $banner-min-height;
-	@include breakpoint-min('sm') { height: $banner-min-height * 1.1; }
-	@include breakpoint-min('md') { height: $banner-min-height * 1.4; }
-	@include breakpoint-min('lg') { height: $banner-min-height * 2; }
+	min-height: $banner-min-height;
+	@include breakpoint-min('sm') { min-height: $banner-min-height * 1.1; }
+	@include breakpoint-min('md') { min-height: $banner-min-height * 1.4; }
+	@include breakpoint-min('lg') { min-height: $banner-min-height * 2; }
 }
 
 .banner {
@@ -52,16 +52,36 @@ $banner-min-height: 400px;
 
 // Banner overlay for when single / single-post page
 .single .banner__overlay {
-	@include background-image(linear-gradient(50deg, rgba(0,0,0,0.6) 0, transparent 100%));
+	@include background-image(linear-gradient(50deg, rgba(0,0,0,0.5) 0, transparent 100%));
 	// background: rgba(0,0,0,0.5);
 }
 
+/**
+ *
+ * Video
+ *
+ */
+
+// Banner overlay when single and post type is video
+.banner--video .banner__overlay {
+	background: rgba(0, 0, 0, 0.7);
+}
+
+// Make video sensible sized
+.banner__video {
+	@include breakpoint-min('sm') {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+}
+
 .banner__header {
-	@include flex-text(6);
+	@include flex-text(8);
 	@include text-shadow(3px);
 
 	color: #fff;
 	font-family: $font-family-fancy;
+	letter-spacing: 0;
 	line-height: 0.8em;
 	margin: 0 0 0.2em 0;
 
@@ -92,7 +112,7 @@ $banner-min-height: 400px;
 	z-index: 1000;
 	border-radius: 0;
 	border: 0;
-	box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 20px rgba(0,0,0,0.5);
 	margin: 0;
 	opacity: 0;
 	padding: 0;
@@ -115,6 +135,7 @@ $banner-min-height: 400px;
 		opacity: 1;
 	}
 
+	// Title for the panel box
 	& .panel-heading {
 		@include text-shadow(1px);
 
@@ -167,6 +188,12 @@ $banner-min-height: 400px;
 
 	a:hover .media-object { @include box-shadow(2px); }
 
-	h4 { margin: 0; font-weight: 800; }
-	p { margin: 0; }
+	h4 { 
+		@include flex-text(-0);
+		margin: 0; font-weight: 800; 
+	}
+	p { 
+		@include flex-text(-1);
+		margin: 0; 
+	}
 }

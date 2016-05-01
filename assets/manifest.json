@@ -23,6 +23,12 @@
     "matchHeight.js": {
       "bower": ["matchHeight"]
     },
+    "instafeed.js": {
+      "files": [
+        "scripts/instafeed.js",
+        "scripts/instafeed-setup.js"
+      ]
+    },
     "responsive-bootstrap-toolkit.js": {
       "bower": ["responsive-bootstrap-toolkit"]
     },

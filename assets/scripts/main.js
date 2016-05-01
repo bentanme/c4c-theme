@@ -22,8 +22,14 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
-        $('.post-grid__article').matchHeight();
         $('.match-height').matchHeight();
+        $('.match-height-min-height').matchHeight({ property: 'min-height' });
+
+        // Update matchHeight on page resize
+        $(window).resize(function(event) {
+          console.log("Window resize detected");
+          $.fn.matchHeight._update();
+        });
       }
     },
     // Home page
@@ -38,6 +44,7 @@
 
         // Make posts the same height
         $('.post-grid__article').matchHeight();
+        $('.post-grid__article__box').matchHeight();
 
         /**
          *
@@ -47,13 +54,10 @@
 
         // On page resize
         $(window).resize(function() {
-          console.log("Resizing");
 
           // Update banner positioning
           banner.centreLatestContent();
 
-          // Update match height
-          $.fn.matchHeight._update();
         });
 
         $('.banner').addClass('banner--reveal');

@@ -1,14 +1,20 @@
 <div class="post__sidebar__content">
 	<div class="post__sidebar__section">
-		<h2 class="first text-fancy">About</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, vel tenetur. Perspiciatis facilis saepe cumque aperiam aut quasi. Consectetur reprehenderit aspernatur tenetur laborum assumenda necessitatibus in molestias nam omnis sit!</p>
-		<p><a href="" class="text-strong">Learn more</a></p>
+
+		<div class="sidebar__about-box">
+
+			<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/about-hero.png" class="img-responsive img-responsive-center sidebar__about-box__hero" style="max-height:200px" alt="Cooking 4 Change Can logo">
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, vel tenetur. Perspiciatis facilis saepe cumque aperiam aut quasi.</p>
+			<p><a href="" class="btn btn-info btn-sm m-t-10">More</a></p>
+
+		</div>
 	</div>
 
 	<div class="post__sidebar__section post__sidebar__latest">
-		<h2 class="first text-fancy">Other popular posts</h2>
+		<h3 class="first text-fancy">Top posts</h3>
 		<div class="latest-panel">
-			<ul class="m-t-30 m-b-30">
+			<ul class="m-t-30">
 				<a href="">
     				<li>
     					<div class="media">
@@ -71,6 +77,20 @@
 				</a>
 			</ul>
 		</div>
+	</div>
+
+	<div class="post__sidebar__section">
+		<h3 class="first text-fancy">Top categories</h3>
+
+		<ul class="no-bullets m-t-30 sidebar__categories">
+			<li><a href="">Fusion food <span class="badge badge-info pull-right">123</span></a></li>
+			<li><a href="">Vegetarian delights <span class="badge badge-info pull-right">2</span></a></li>
+			<li><a href="">Dairy free <span class="badge badge-info pull-right">123</span></a></li>
+			<li><a href="">Vegetarian delights <span class="badge badge-info pull-right">2</span></a></li>
+			<li><a href="">Dairy free <span class="badge badge-info pull-right">123</span></a></li>
+			<li><a href="">Vegetarian delights <span class="badge badge-info pull-right">2</span></a></li>
+			<li><a href="">Dairy free <span class="badge badge-info pull-right">2</span></a></li>
+		</ul>
 	</div>
 </div>
 

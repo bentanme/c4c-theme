@@ -35,14 +35,14 @@
   // @extend .thumbnail;
 
   @extend .img-responsive;
-  border-bottom: 1px solid $c4c-grey-light;
+  // border-bottom: 1px solid $c4c-grey-light;
 }
 .wp-caption-text {
   // padding: $thumbnail-caption-padding;
   @extend .text-italic;
-  @extend .text-serif;
+  @extend .text-cursive;
   // @extend .text-normal;
-  @extend .text-grey;
+  // @extend .text-grey;
 
   padding: 1em 0;
 

@@ -3,12 +3,12 @@
 	background: #000;
 	color: #fff;
 	display: block;
-	padding: 1em 0;
+	padding: 2em 0;
 	width: 100%;
 }
 .section-block--yellow {
 	background: $c4c-yellow;
-	color: darken($c4c-yellow, 35%);
+	color: desaturate(darken($c4c-yellow, 30%), 20%);
 }
 .section-block--white {
 	background: #fff;
@@ -20,7 +20,7 @@
 }
 .section-block--blue {
 	background: $c4c-blue;
-	color: darken($c4c-blue, 30%);
+	color: darken($c4c-blue, 40%);
 }
 
 .section-block__shape,
@@ -45,8 +45,7 @@
 .section-block--newsletter {
 	@extend .section-block--red;
 
-	// background: url('../images/newsletter-bg-2.jpg') no-repeat;
-	// background: url('../images/newsletter-bg.svg') no-repeat 0 100% $c4c-red;
+	background-image: url('../images/topographic-bg.svg');
 	background-size: cover;
 
 	// Fix layering for little email icon
@@ -56,6 +55,18 @@
 .section-block--sponsors {
 	background: url('../images/pie-bg.jpg') no-repeat 0 100% #fff;
 	background-size: cover;
+}
+
+.section-block--topographic {
+	background-color: white;
+	background-image: url('../images/topographic-bg.svg');
+	background-size: cover;
+}
+
+.section-block--instafeed {
+	background-color: #fff;
+	// background-image: url('../images/topographic-bg.svg');
+	// background-size: cover;
 }
 
 .section-block--border-top { border-top: 1px solid lighten($c4c-grey, 25%); }

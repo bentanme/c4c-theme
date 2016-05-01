@@ -9,12 +9,15 @@ $sidebar-sm-columns:    4;
 $c4c-yellow:			#fcd91d;
 $c4c-yellow-light:		lighten($c4c-yellow, 30%);
 $c4c-blue:				#65aedb;
+$c4c-blue-light:		#a1ddf8;
 $c4c-blue-dark:			#4b85af;
 $c4c-red:				#c73828;
 $c4c-border:			#eee;
 $c4c-grey:				#aaa;
 $c4c-grey-light:		lighten(#aaa, 25%);
 $c4c-grey-dark:			darken(#aaa, 30%);
+
+$text-color: 			#777;
 
 $brand-primary:         $c4c-red;
 $brand-success:         #27ae60;
@@ -42,6 +45,7 @@ $font-size-base: 14px;
 $font-family-sans-serif: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 $font-family-serif: 'Lora', 'Times', 'Georgia', serif;
 $font-family-fancy: 'Satisfy', cursive;
+$font-family-cursive: 'Gloria Hallelujah', cursive;
 
 // Radius
 $border-radius-base:	2px;
@@ -49,5 +53,5 @@ $border-radius-small:	2px;
 $border-radius-large:	2px;
 
 // Modular Scale
-$modular-scale-ratio: 	$perfect-fourth;
-$modular-scale-base: 	1.4rem;
+$modular-scale-ratio: 	$minor-third;
+$modular-scale-base: 	1.6rem;

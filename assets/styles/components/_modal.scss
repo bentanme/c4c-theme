@@ -1,0 +1,20 @@
+.modal-backdrop.in {
+	opacity: 0.8;
+}
+
+.modal-content {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.modal-header,
+.modal-footer { border: 0; }
+
+.modal .close {
+	margin-top: -0.5em;
+}
+
+// Denote half-width for form
+.modal__half {
+	@include make-md-column(6, 10px);
+}

@@ -1,11 +1,16 @@
 .main-header {
+
+	@include breakpoint-max('xs') {
+		border-bottom: 1px solid $c4c-grey-light;
+	}
+
 	h1.logo {
 		margin: 0;
 		padding: 0.5em 0;
 		text-align: left;
 		transition: all 0.5s ease;
 
-		@include breakpoint-min('sm') { text-align: center; }
+		// @include breakpoint-min('sm') { text-align: center; }
 	}
 	h1.logo img { height: 80px; }
 

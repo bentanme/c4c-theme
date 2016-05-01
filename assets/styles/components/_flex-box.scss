@@ -1,0 +1,10 @@
+.flexbox--parent {
+	@include align-items(center);
+	@include display(flex);
+	@include flex-direction(row);
+	@include justify-content(center);
+}
+
+.flexbox--parent > .flexbox--child-1 {
+	@include flex(1);
+}

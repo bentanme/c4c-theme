@@ -1,57 +1,30 @@
+<?php
+
+// Get the sticky posts
+$args = array(
+	'posts_per_page' => 3,
+	'post__in'  => get_option('sticky_posts'),
+	'ignore_sticky_posts' => 1
+);
+$query = new WP_Query($args);
+
+?>
+
 <div class="banner__group">
 	<div class="banner__carousel">
+		<?php
+		if($query->have_posts()) :
+			while($query->have_posts()) :
 
-		<!-- Banner 1 (repeating element) -->
-		<!-- Include hero image as background image in .banner -->
-		<div class="banner" style="background-image: url('<?php echo get_bloginfo('template_url'); ?>/assets/images/photos/mini-blueberry-galettes-8w.jpg')">
-			<div class="banner__overlay vertically--parent">
-				<div class="vertically--child">
-					<div class="container">
-						<!-- Article title -->
-						<h1 class="banner__header text-center--sm">Blueberry muffins</h1>
-						<!-- Article excerpt -->
-						<p class="banner__description text-center--sm">Delicious warm and blue</p>
-						<!-- Article CTA -->
-						<p class="p-t-10 text-center--sm box-shadow">
-							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary">See more</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /Banner 1 -->
+				// Set post as current focus
+				$query->the_post();
 
-		<!-- Banner 2 (repeating element) -->
-		<div class="banner" style="background-image: url('<?php echo get_bloginfo('template_url'); ?>/assets/images/photos/chinese-sausage-potato-salad-2.jpg')">
-			<div class="banner__overlay vertically--parent">
-				<div class="vertically--child">
-					<div class="container">
-						<h1 class="banner__header text-center--sm">Lemon curd pie</h1>
-						<p class="banner__description text-center--sm">Lemony and curdy</p>
-						<p class="p-t-10 text-center--sm box-shadow">
-							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary">See more</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /Banner 2 -->
+				// Get template
+				get_template_part('templates/banner-slide-item');
 
-		<!-- Banner 3 (repeating element) -->
-		<div class="banner" style="background-image: url('<?php echo get_bloginfo('template_url'); ?>/assets/images/photos/tomato-basil-burrata-pasta-6w1.jpg')">
-			<div class="banner__overlay vertically--parent">
-				<div class="vertically--child">
-					<div class="container">
-						<h1 class="banner__header text-center--sm">Ostrich on toast</h1>
-						<p class="banner__description text-center--sm">Ostrich with a bready twist</p>
-						<p class="p-t-10 text-center--sm box-shadow">
-							<a href="#link-to-article" class="btn btn-md btn-submit btn-rounded btn-primary">See more</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /Banner 3 -->
+			endwhile;
+		endif;
+		?>
 	</div>
 
 	<div class="panel panel-default banner__latest-panel col-md-4 col-lg-3">
@@ -60,62 +33,24 @@
 		</div>
 		<div class="panel-body latest-panel">
 			<ul>
-				<!--
-				Item 1:
-				Always set the class to active for the first one
-				-->
-				<a href="#" class="active" data-index="0">
-					<li>
-						<div class="media">
-							<div class="vertically--parent">
-								<div class="media-left">
-									<!-- Article hero image (use xs size if possible) -->
-									<img class="media-object img-circle" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/photos/thumbnails/t1.jpg" alt="Dish thumbnail">
-								</div>
-								<div class="media-body vertically--child">
-									<!-- Aritcle title -->
-									<h4 class="media-heading">Blueberry muffins</h4>
-									<!-- Article description -->
-									<p class="description">Delicious warm and blue</p>
-								</div>
-							</div>
-						</div>
-					</li>
-				</a>
 
-				<!-- Item 2 -->
-				<a href="#" data-index="1">
-					<li>
-						<div class="media">
-							<div class="vertically--parent">
-								<div class="media-left">
-									<img class="media-object img-circle" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/photos/thumbnails/t2.jpg" alt="Dish thumbnail">
-								</div>
-								<div class="media-body vertically--child">
-									<h4 class="media-heading">Lemon curd pie</h4>
-									<p class="description">Lemony and curdy</p>
-								</div>
-							</div>
-						</div>
-					</li>
-				</a>
+				<?php
+				if($query->have_posts()) :
+					$iterator = 0;
+					while($query->have_posts()) :
 
-				<!-- Item 3 -->
-				<a href="#" data-index="2">
-					<li>
-						<div class="media">
-							<div class="vertically--parent">
-								<div class="media-left">
-									<img class="media-object img-circle" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/photos/thumbnails/t3.jpg" alt="Dish thumbnail">
-								</div>
-								<div class="media-body vertically--child">
-									<h4 class="media-heading">Ostrich on toast</h4>
-									<p class="description">Ostrich with a bready twist</p>
-								</div>
-							</div>
-						</div>
-					</li>
-				</a>
+						// Set post as current focus
+						$query->the_post();
+
+						// Get template (used instead of get_template_part to gain access to variables)
+						include(locate_template('templates/banner-nav-item.php'));
+
+						// Increment
+						$iterator++;
+
+					endwhile;
+				endif;
+				?>
 			</ul>
 		</div>
 	</div>

@@ -7,15 +7,14 @@
 .ripped-paper {
 
 	@extend .text-serif;
-	@extend .text-serif;
-	@extend .text-medium;
+	@extend .text-normal;
 
 	background: url('../images/c4c-section-bg--white-down.svg') repeat-x 0 100% lighten($c4c-yellow, 25%);
 	border: none;
 	color: darken($c4c-yellow, 30%);
 	margin: 2em 0;
-	padding: 2em;
+	padding: 1.5em 2em 2em;
 	border-radius: 0;
-	box-shadow: inset 0 10px 0 lighten($c4c-yellow, 10%);
+	box-shadow: inset 0 1px 3px lighten($c4c-yellow, 10%);
 
 }

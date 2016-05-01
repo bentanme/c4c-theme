@@ -9,8 +9,8 @@
 ?>
 
 <!-- Charities -->
-<div class="section-block section-block--white section-block--border-bottom text-center charities">
-	<div class="container padding--lg padding-sm--sm">
+<div class="section-block section-block--topographic section-block--white section-block--border-bottom text-center charities">
+	<div class="container-fluid padding--lg padding-sm--sm">
 		<div class="row">
 
 			<div class="col-md-12">
@@ -48,12 +48,6 @@
 						<p>The leading organisation in New Zealand dedicated to supporting patients and their families living with leukaemia, lymphoma, myeloma and related blood conditions</p>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<a href="" class="btn btn-round btn-submit btn-primary">Learn more</a>
 			</div>
 		</div>
 	</div>

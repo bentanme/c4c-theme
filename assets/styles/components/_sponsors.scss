@@ -1,6 +1,7 @@
 .sponsors {
-    a { opacity: 1; }
-    a:hover { opacity: 1; }
+    a { opacity: 1; transition: all 0.3s; }
+    a:active,
+    a:hover { opacity: 0.5; }
 
     img {
         max-height: 50px;

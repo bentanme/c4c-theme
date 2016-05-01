@@ -1,0 +1,89 @@
+.post__sidebar {
+	@extend .padding--lg;
+	color: darken($c4c-grey, 20%);
+
+	@include make-md-column(4, 80px);
+	@include breakpoint-min('md') {
+		// border-left: 1px solid $c4c-grey-light;
+	}
+	@include breakpoint-max('xs') {
+		margin-top: -20px;
+	}
+
+	h1, h2, h3, h4 {
+		@extend .text-blue-dark;
+	}
+
+	a { color: $c4c-blue-dark; }
+	a:hover, a:focus { color: darken($c4c-blue-dark, 20%); }
+}
+
+// Blue separation line between main content and sidebar
+@include breakpoint-max('xs') {
+	.post__sidebar:before {
+		content: "";
+		width: 100%;
+		height: 5px;
+		border-top: 5px solid $c4c-blue;
+		display: inline-block;
+		top: -60px;
+		position: relative;
+	}
+}
+
+/**
+ *
+ * About section
+ *
+ */
+
+.sidebar__about-box {
+	@extend .text-center;
+	@extend .text-healthy;
+	@extend .text-small;
+
+	// background: $c4c-blue-light;
+	border: 3px solid $c4c-grey-light;
+	// color: $c4c-blue-dark;
+	padding: 2em;
+}
+
+.sidebar__about-box__hero {
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 1em;
+}
+
+/**
+ *
+ * Categories box
+ *
+ */
+
+.sidebar__categories {
+
+	li { padding: 0 0 0.1em 0; }
+
+	// Badge number count
+	.badge { background: $c4c-grey; }
+	a:hover .badge { background: $c4c-blue; }
+
+}
+
+.post__sidebar__content {
+
+}
+
+.post__sidebar__section {
+	padding: 2em 0;
+	// border-bottom: 1px solid $c4c-grey-light;
+}
+
+.post__sidebar__section:first-child { padding-top: 0; }
+.post__sidebar__section:last-child { padding-bottom: 0; border-bottom: none; }
+
+// Different section modules
+
+.post__sidebar__latest {
+	@extend .text-normal;
+}

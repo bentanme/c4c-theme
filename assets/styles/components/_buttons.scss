@@ -1,13 +1,20 @@
 .btn {
 	@extend .text-letter-spacing--sm;
 	@extend .text-uppercase;
+	@extend .btn-rounded;
+	@extend .btn-primary;
 
+	color: #fff; // Overrides styling in sidebar
+	text-shadow: 0 1px 1px rgba(black, 0.1);
 	letter-spacing: 0.0em;
 	padding: 0.8em 2em 1.2em;
 	font-weight: 800;
 	border: 0;
-	transition: all 0.3s ease-in-out;
-	box-shadow: inset 0 -4px 0 rgba(0,0,0,.2);
+	transition: all 0.1s ease-in-out;
+	box-shadow:
+		inset 0 -4px 0 rgba(0,0,0,.2), // Lower 3D shadow
+		// 0 1px 10px rgba(0,0,0,.1), // Shadow glow
+		inset 0 1px 0 rgba(255, 255, 255, .2); // Upper highlight shadow
 }
 
 .btn-round,
@@ -18,6 +25,20 @@
 // Button active
 
 .btn.active,
+.btn[disabled],
 .btn:active {
-	box-shadow: inset 0 5px 0 rgba(0,0,0,.05);
+	padding-top: 0.85em;
+	padding-bottom: 1.15em;
+	box-shadow:
+		// 0 1px 20px rgba(0,0,0,.3), // Shadow glow
+		inset 0 -3px 0 rgba(0,0,0,.2); // Lower 3D shadow
+	outline: none;
+	color: rgba(#fff, 0.8) !important;
+}
+
+// Display block
+
+.btn-full {
+	width: 100%;
+	display: block;
 }
