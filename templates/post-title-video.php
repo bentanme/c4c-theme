@@ -1,8 +1,9 @@
 <?php
 
 $post_id = get_the_ID();
-$video_id_youtube = get_post_custom_values('youtube_video_id');
-$video_id_vimeo = get_post_custom_values('vimeo_video_id');
+
+$video_id_youtube = get_post_custom_values('youtube_video_id')[0];
+$video_id_vimeo = get_post_custom_values('vimeo_video_id')[0];
 
 ?>
 
