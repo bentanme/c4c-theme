@@ -9,7 +9,7 @@ use Roots\Sage\Assets;
 ?>
 
 <?php
-	get_template_part('templates/message-banner');
+	// get_template_part('templates/message-banner');
 	get_template_part('templates/post-grid');
 	get_template_part('templates/newsletter-sign-up');
 	get_template_part('templates/home-about');

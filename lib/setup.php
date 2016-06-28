@@ -103,7 +103,7 @@ function assets() {
 
   wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
   wp_enqueue_style('foundation-icons/css', Assets\asset_path('fonts/foundation-icons.css'), false, null);
-  wp_enqueue_style('google-fonts/css', 'https://fonts.googleapis.com/css?family=Patua+One|Josefin+Sans:400,700|Lora|Caveat+Brush', false, null);
+  wp_enqueue_style('google-fonts/css', 'https://fonts.googleapis.com/css?family=Patua+One|Josefin+Sans:400,700|Caveat+Brush', false, null);
 
   /*=====  End of Styles  ======*/
 

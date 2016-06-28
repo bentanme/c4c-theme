@@ -76,7 +76,7 @@ $banner-min-height: 300px;
 }
 
 .banner__header {
-	@include flex-text(8);
+	@include flex-text(7);
 	@include text-shadow(3px);
 
 	color: #fff;
