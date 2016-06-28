@@ -7,19 +7,20 @@
 	color: #fff; // Overrides styling in sidebar
 	text-shadow: 0 1px 1px rgba(black, 0.1);
 	letter-spacing: 0.0em;
-	padding: 0.8em 2em 1.2em;
+	padding: 1em 2em;
 	font-weight: 800;
+	font-size: 0.9em;
 	border: 0;
 	transition: all 0.1s ease-in-out;
 	box-shadow:
-		inset 0 -4px 0 rgba(0,0,0,.2), // Lower 3D shadow
+		// inset 0 -1px 0 rgba(0,0,0,.2), // Lower 3D shadow
 		// 0 1px 10px rgba(0,0,0,.1), // Shadow glow
 		inset 0 1px 0 rgba(255, 255, 255, .2); // Upper highlight shadow
 }
 
 .btn-round,
 .btn-rounded {
-	border-radius: 5px;
+	border-radius: 9999px;
 }
 
 // Button active

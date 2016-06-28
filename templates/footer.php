@@ -9,7 +9,7 @@
 <footer class="section-block footer">
   <div class="container">
   	<div class="row">
-  		<div class="col-md-4 text-center padding-sm--sm">
+  		<div class="col-md-4 text-center padding-md--sm">
 	  		<div class="match-height vertically--parent">
 	  			<div class="vertically--child">
 		  			<!-- Social media icons -->

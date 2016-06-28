@@ -5,7 +5,9 @@ namespace Roots\Sage\Extras;
 use Roots\Sage\Setup;
 
 /**
+ *
  * Add <body> classes
+ *
  */
 function body_class($classes) {
   // Add page slug if it doesn't exist
@@ -25,7 +27,9 @@ function body_class($classes) {
 add_filter('body_class', __NAMESPACE__ . '\\body_class');
 
 /**
+ *
  * Clean up the_excerpt()
+ *
  */
 function excerpt_more() {
   return ' &hellip;';
@@ -34,8 +38,10 @@ function excerpt_more() {
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 /**
+ *
  * Custom background image alignment function
  * returns the correct class
+ *
  */
 function featured_image_position($post_id) {
   $featured_image_position = get_post_custom_values('featured_image_position', $post_id)[0];

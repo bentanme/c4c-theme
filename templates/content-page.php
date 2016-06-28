@@ -1,6 +1,6 @@
 <?php use Roots\Sage\Titles; ?>
 
-<div class="section-block--white section-block--border-bottom padding--xl">
+<div class="section-block--yellow padding--xl">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">

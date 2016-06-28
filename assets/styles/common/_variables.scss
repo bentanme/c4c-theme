@@ -42,10 +42,11 @@ $state-danger-bg: lighten($brand-danger,20);
 
 // Fonts
 $font-size-base: 14px;
-$font-family-sans-serif: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+$font-family-sans-serif: 'Josefin Sans', 'Helvetica', 'Arial', sans-serif;
 $font-family-serif: 'Lora', 'Times', 'Georgia', serif;
-$font-family-fancy: 'Satisfy', cursive;
-$font-family-cursive: 'Gloria Hallelujah', cursive;
+$font-family-fancy: 'Patua One', sans-serif;
+$font-family-brush: 'Caveat Brush', serif;
+$line-height-base: 1.5;
 
 // Radius
 $border-radius-base:	2px;
@@ -54,4 +55,4 @@ $border-radius-large:	2px;
 
 // Modular Scale
 $modular-scale-ratio: 	$minor-third;
-$modular-scale-base: 	1.6rem;
+$modular-scale-base: 	1.5rem;

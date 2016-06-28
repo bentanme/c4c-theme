@@ -6,11 +6,11 @@
 
 .post__content {
 
-	line-height: 1.6em;
 	@extend .text-medium;
-	@extend .text-serif;
+	@extend .text-san-serif;
 
 	img { @extend .img-responsive; }
+
 	h1, h2, h3, h4 {
 		@extend .text-blue-dark;
 		@extend .text-strong;
@@ -30,7 +30,6 @@
 		@extend .text-cursive;
 
 		line-height: 1.5em;
-		// color: darken($c4c-blue, 20%);
 		border-color: #eee;
 	}
 
@@ -47,6 +46,7 @@
 	    color: #444;
 	    line-height: 40px;
 		font-size: 18px;
+		white-space: normal;
 
 		// Let's draw the lines
 		background: white;
@@ -73,7 +73,7 @@
 		@extend .text-serif;
 		@extend .text-uppercase;
 
-		@include flex-text(7);
+		@include flex-text(8);
 
 		float: left;
 		line-height: 1em;

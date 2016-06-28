@@ -17,14 +17,16 @@
 .text-san-serif {
 	font-family: $font-family-sans-serif;
 }
-.text-cursive {
-	font-family: $font-family-cursive;
+.text-brush {
+	@include font-feature-settings("kern" true);
+	font-family: $font-family-brush;
+	letter-spacing: -0.04em;
 }
 
 // Text formatting
 
 .text-bold,
-.text-strong { font-weight: 800; }
+.text-strong { font-weight: 900; }
 .text-thin { font-weight: 300; }
 .text-healthy { font-weight: 400; }
 .text-shadow { @include text-shadow(2px); }
@@ -60,14 +62,14 @@
 
 // Font sizing
 
-.text-tiny { @include flex-text(-2); }
-.text-small { @include flex-text(-1); }
-.text-normal { @include flex-text(0); }
-.text-medium { @include flex-text(1); }
-.text-large { @include flex-text(2); }
-.text-super { @include flex-text(3); }
-.text-jumbo { @include flex-text(4); }
-.text-wtf { @include flex-text(5); }
+.text-tiny { @include flex-text(-1); }
+.text-small { @include flex-text(0); }
+.text-normal { @include flex-text(1); }
+.text-medium { @include flex-text(2); }
+.text-large { @include flex-text(3); }
+.text-super { @include flex-text(4); }
+.text-jumbo { @include flex-text(5); }
+.text-wtf { @include flex-text(6); }
 
 // Little title
 .title-little {
@@ -79,8 +81,8 @@
 
 // Heading sizes and styling
 
-h1 { @include flex-text(6); }
-h2 { @include flex-text(5); }
+h1 { @include flex-text(5); }
+h2 { @include flex-text(4); }
 h3 { @include flex-text(3); }
 h4 { @include flex-text(2); }
 
@@ -92,9 +94,7 @@ h1, h2, h3, h4 {
 
 // Fix kerning
 h1, h2, h3 {
-	letter-spacing: -0.04em;
-
-	&.text-fancy { letter-spacing: 0 !important; }
+	// letter-spacing: -0.02em;
 }
 
 // A small arrow displayed after content denoting an action

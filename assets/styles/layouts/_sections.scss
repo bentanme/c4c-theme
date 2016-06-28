@@ -7,8 +7,8 @@
 	width: 100%;
 }
 .section-block--yellow {
-	background: $c4c-yellow;
-	color: desaturate(darken($c4c-yellow, 30%), 20%);
+	background: url('../images/bg-noise.png') $c4c-yellow;
+	color: desaturate(darken($c4c-yellow, 40%), 20%);
 }
 .section-block--white {
 	background: #fff;
@@ -63,10 +63,19 @@
 	background-size: cover;
 }
 
+.section-block--noise {
+	background: url('../images/bg-noise.png') #fff;
+}
+
+.section-block--wood {
+	background: url('../images/bg-wood.jpg') #fff;
+	// background-size: 50%;
+}
+
 .section-block--instafeed {
-	background-color: #fff;
-	// background-image: url('../images/topographic-bg.svg');
-	// background-size: cover;
+	@extend .section-block--wood;
+	padding: 3rem 0;
+	border-top: 1px solid #eee;
 }
 
 .section-block--border-top { border-top: 1px solid lighten($c4c-grey, 25%); }

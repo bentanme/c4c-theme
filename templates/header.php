@@ -1,8 +1,8 @@
-<header class="main-header section-block--topographic">
+<header class="main-header section-block--wood">
 
   <div class="container">
     <div class="row flexbox--parent">
-      <div class="col-sm-6 flexbox--child-1">
+      <div class="col-sm-12 flexbox--child-1">
         <!-- Site logo -->
         <h1 class="logo"><a href="<?= site_url() ?>"><img src="<?= get_bloginfo('template_url') ?>/assets/images/c4c-logo.svg" alt="Cooking 4 Change Logo" /></a></h1>
       </div>

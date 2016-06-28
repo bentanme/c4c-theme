@@ -23,7 +23,7 @@
 								<input type="text" class="form-control input-lg email-address" id="" placeholder="Your email address">
 							</div>
 
-							<button type="button" class="btn btn-info btn-rounded btn-submit" data-toggle="modal" data-target="#newsletterModal"><i class="fi-mail icon m-r-5"></i> Join our newsletter</button>
+							<button type="button" class="btn btn-info btn-rounded btn-submit" data-toggle="modal" data-target="#newsletterModal">Join our newsletter</button>
 						</form>
 					</div>
 				</div>

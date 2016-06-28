@@ -12,7 +12,7 @@
 		color: #fff;
 		display: inline-block;
 		height: $icon-size;
-		line-height: $icon-size;
+		line-height: $icon-size * 1.2;
 		vertical-align: middle;
 		width: $icon-size;
 		border-radius: 9999px;
@@ -32,7 +32,7 @@
 }
 
 .social-media--header {
-	@include breakpoint-max('sm') {
+	@include breakpoint-max('xs') {
 		display: none !important;
 	}
 }

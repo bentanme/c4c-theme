@@ -1,16 +1,16 @@
 .posts-grid {
 	// background: url('../images/topographic-bg.svg') 0 -100px #fff;
 	display: block;
-	padding: 3em 0;
+	padding: 3em 0 0;
 	width: 100%;
 
 	@include breakpoint-max('xs') {
 		background-size: auto;
+		margin-bottom: -6em; // Adjust for large white space at bottom
 	}
 }
 
 .posts-grid__shape {
-	// background: url('../images/c4c-section-bg--black.svg') repeat-x 0 0;
 	display: block;
 	height: 15px;
 	margin-top: -15px;
@@ -26,8 +26,8 @@
 .post-grid__article {
 
 	@include make-xs-column(12, 5px);
-	@include make-sm-column(6, 0);
-	@include make-md-column(4, 0);
+	@include make-sm-column(6, 60px);
+	@include make-md-column(4, 60px);
 
 	margin: 0;
 
@@ -58,8 +58,16 @@
 		width: 100%;
 		overflow: hidden;
 
-		@include breakpoint-max('xs') {
-			height: 200px;
+		&:before {
+			display: inline-block;
+			content: "";
+			height: 250px;
+			width: 100%;
+			position: absolute;
+			z-index: -10;
+			top: 10px;
+			left: 10px;
+			box-shadow: inset 0 0 0 5px $c4c-yellow;
 		}
 	}
 	.hero-image__inset {
@@ -71,28 +79,21 @@
 		transition: all 0.2s ease-in-out;
 		text-align: center;
 		line-height: 250px; // For play button
-
-		@include breakpoint-max('xs') {
-			height: 200px;
-			line-height: 200px;
-		}
 	}
 
 	.description {
 
-		@include flex-text(0);
-		@extend .text-blue-dark;
+		@include flex-text(1);
+		@extend .text-grey, .text-center;
 
-		margin: 0;
 		padding: 1em 1.5em 2em;
 		transition: all .2s ease-in-out;
 
 		h2 {
-			// @extend .text-strong;
-			@extend .text-cursive;
-			@extend .text-blue-dark;
-			@include flex-text(2);
+			@extend .text-fancy, .text-red, .text-brush;
+			@include flex-text(3);
 			transition: all .2s ease-in-out;
+			margin-bottom: 0.2em;
 		}
 
 		// Categories / tags
@@ -107,13 +108,14 @@
 	.play-button {
 		font-size: 5rem;
 		color: #fff;
-		line-height: 7rem;
+		line-height: 8rem;
 		vertical-align: middle;
 	}
 
 	.play-button-bg {
-		background: rgba($c4c-red, 0.8);
-		border-radius: $border-radius-base;
+		background: rgba($c4c-yellow, 0.8);
+		box-shadow: 0 3px 100px 10px rgba(#000, 1);
+		border-radius: 100%;
 		display: inline-block;
 		line-height: 0;
 		width: 7rem;
@@ -126,15 +128,24 @@
 a:hover,
 a:focus {
 	.post-grid__article__box {
-		background: $c4c-grey-light;
+		// background: $c4c-grey-light;
 	}
 
-	.hero-image__inset {
-		transform: scale(1.10);
+	.hero-image:before {
+		box-shadow: inset 0 0 0 5px $c4c-red;
 	}
 }
 
-// Color every other box
-.post-grid__article:nth-child(2) .post-grid__article__box {
-	background: #333;
+// Style random looking box adjustments
+.posts-grid a:nth-child(4n+1) .hero-image {
+	@include transform(rotate(+2deg));
+}
+.posts-grid a:nth-child(4n+2) .hero-image {
+	@include transform(rotate(-2deg));
+}
+.posts-grid a:nth-child(4n+3) .hero-image {
+	@include transform(rotate(+2deg));
+}
+.posts-grid a:nth-child(4n+4) .hero-image {
+	@include transform(rotate(-4deg));
 }

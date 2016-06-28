@@ -10,7 +10,7 @@ $is_video = has_post_format('video');
 <article>
 
 	<div class="text-center m-b-30">
-		<h2 class="text-strong m-b-10 m-t-0">
+		<h2 class="text-brush text-wtf m-b-10 m-t-0">
 		<? if($is_video) : ?>
 		<div class="play-button-bg"><i class="fi-play play-button"></i></div>
 		<? endif; ?>

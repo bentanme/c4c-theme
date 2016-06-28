@@ -20,7 +20,7 @@ $previous_post = get_next_post();
           <div class="vertically--parent match-height">
             <div class="vertically--child">
               <div class="post__navigation__label">
-                Next up
+                Next post
               </div>
               <div class="post__navigation__title">
                 <?= get_the_title($previous_post); ?>
@@ -39,7 +39,7 @@ $previous_post = get_next_post();
           <div class="vertically--parent match-height">
             <div class="vertically--child">
               <div class="post__navigation__label">
-                Previously
+                Previous post
               </div>
               <div class="post__navigation__title">
                 <?= get_the_title($next_post); ?>

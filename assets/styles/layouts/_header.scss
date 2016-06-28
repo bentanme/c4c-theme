@@ -1,13 +1,15 @@
 .main-header {
 
+	border-bottom: 1px solid #eee;
+	padding: 0 0 1.5em;
+
 	@include breakpoint-max('xs') {
-		border-bottom: 1px solid $c4c-grey-light;
+		padding: 0;
 	}
 
 	h1.logo {
-		margin: 0;
+		margin: 0 auto;
 		padding: 0.5em 0;
-		text-align: left;
 		transition: all 0.5s ease;
 
 		// @include breakpoint-min('sm') { text-align: center; }
@@ -29,7 +31,13 @@
 }
 
 .navbar-c4c {
-	background: $c4c-yellow;
+
+	margin-top: -1em;
+
+	@include breakpoint-max('xs') {
+		margin-top: 0;
+		background: rgba($c4c-yellow, 0.7);
+	}
 }
 .navbar-toggle {
 	$navbar-toggle-height: 5rem;
@@ -56,41 +64,43 @@
 	margin: 0;
 	padding: 0;
 
+	@include breakpoint-max('xs') {
+		padding: 1em 0; // padding for when menu is in xs mode
+	}
+
 	li {
 		@extend .text-letter-spacing;
 		@extend .text-uppercase;
 		@extend .text-strong;
 		@extend .text-normal;
+		@extend .text-fancy;
 
 		list-style: none;
 		float: none;
 		display: inline-block;
-		padding: 1.3em 1.2em;
+		padding: 1em 1.2em;
 	}
 
 	li a { color: #000; }
 	li a:hover,
 	li a:focus {
 		text-decoration: none;
-		color: #fff;
+		color: $c4c-red;
 
-		@include text-shadow(1px);
+		// @include text-shadow(1px);
 	}
 
 	// Menu design when in small size mode
 	@include breakpoint-max('xs') {
+
 		li {
 			// @extend .text-medium;
 			@include flex-text(1);
 
 			display: block;
-			border-bottom: 1px solid darken($c4c-yellow, 10%);
 			padding: 0.5em 0;
 
 			a { display: block; }
-		}
-		li:last-child {
-			border-bottom: none;
 		}
 	}
 }

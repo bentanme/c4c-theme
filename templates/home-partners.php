@@ -8,9 +8,9 @@
 
 <!-- <div class="section-block__shape section-block__shape--white"></div> -->
 <div class="section-block section-block--white">
-	<div class="container-flex">
+	<div class="container">
 		<div class="row">
-			<div class="col-md-12 padding--sm padding-sm--sm text-center">
+			<div class="col-md-12 padding--xl padding-sm--sm text-center">
 				<!-- <h1 class="text-fancy text-blue-dark first">Our partners</h1> -->
 				<!-- <p class="text-grey title-little">Helping to wash the dishes</p> -->
 

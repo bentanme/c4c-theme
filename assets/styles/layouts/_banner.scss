@@ -1,4 +1,4 @@
-$banner-min-height: 400px;
+$banner-min-height: 300px;
 
 .banner__group {
 	position: relative;
@@ -188,12 +188,38 @@ $banner-min-height: 400px;
 
 	a:hover .media-object { @include box-shadow(2px); }
 
-	h4 { 
+	h4 {
 		@include flex-text(-0);
-		margin: 0; font-weight: 800; 
+		margin: 0; font-weight: 800;
 	}
-	p { 
+	p {
 		@include flex-text(-1);
-		margin: 0; 
+		margin: 0;
+	}
+}
+
+/**
+ *
+ * Message banner
+ *
+ */
+
+.message-banner {
+
+	background-size: cover;
+	background-image: url('../images/bg-food.jpg');
+	background-position: 50% 50%;
+
+	&__overlay {
+		background: rgba($c4c-yellow, 0.6);
+	}
+
+	h1 {
+		@extend .text-center, .text-brush;
+		@include flex-text(10);
+
+		color: #fff;
+		text-shadow: 0 3px 3px rgba(#000, 0.1);
+		margin: 0;
 	}
 }

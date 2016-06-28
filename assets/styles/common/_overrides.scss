@@ -2,7 +2,7 @@
 
 html, body {
 	height: 100%;
-	-webkit-font-smoothing: antialiased; // Makes the fonts look nice and smooth
+	// -webkit-font-smoothing: antialiased; // Makes the fonts look nice and smooth
 
 	// Text highlight
 	::-moz-selection { background: lighten($brand-warning, 40%); }

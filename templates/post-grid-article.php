@@ -32,7 +32,7 @@ endif;
 				<p><?= get_post_custom_values('tagline')[0]; ?></p>
 				<div class="description__tags hide"><i class="fi-price-tag m-r-5"></i></div>
 
-				<p class="title-little text-tiny text-grey"><time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time></p>
+				<!-- <p class="title-little text-tiny text-grey"><time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time></p> -->
 			</div>
 		</div>
 	</div>

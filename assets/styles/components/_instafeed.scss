@@ -12,11 +12,13 @@
 .instafeed__item:active,
 .instafeed__item:hover {
 	text-decoration: none;
-	color: rgba(white, 0.8);
-	opacity: 0.5;
 	transition: all 0.3s;
+
+	img {
+		box-shadow: inset 0 0 0 5px $c4c-yellow;
+	}
 }
 
-.instafeed__item--link { background: $c4c-blue; }
+.instafeed__item--link { background: $c4c-blue; width: 100%; }
 .instafeed__item--link:active,
-.instafeed__item--link:hover { background: $c4c-blue-dark; opacity: 1; }
+.instafeed__item--link:hover { background: $c4c-blue-dark; }

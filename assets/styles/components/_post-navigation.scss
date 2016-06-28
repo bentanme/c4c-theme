@@ -8,7 +8,7 @@ $post-navigation-height: 200px;
 
 .post__navigation {
 	@extend .container-fluid;
-	@extend .section-block--topographic;
+	@extend .section-block--wood;
 
 	background: #fff;
 	border-top: 1px solid $c4c-grey-light;
@@ -46,16 +46,13 @@ $post-navigation-height: 200px;
 
 // Left
 .post__navigation__left {
-	// Only have line in larger than mobile mode
-	// @include breakpoint-min('sm') { border-right: 1px solid white; }
-
-	text-align: left;
+	text-align: center;
 	background-color: #000;
 }
 
 // Right
 .post__navigation__right {
-	text-align: right;
+	text-align: center;
 	background-color: #000;
 }
 
