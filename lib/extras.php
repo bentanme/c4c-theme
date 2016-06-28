@@ -55,3 +55,33 @@ function featured_image_position($post_id) {
   return $output;
 }
 add_filter('featured_image_position', __NAMESPACE__ . '\\featured_image_position');
+
+/**
+ *
+ * Custom styles for TinyMCE
+ *
+ */
+
+function my_mce_before_init( $settings ) {
+
+    $style_formats = [
+      [
+        'title' => 'Ingredients list',
+        'block' => 'div',
+        'classes' => 'ingredients',
+        'wrapper' => true
+      ]
+    ];
+
+    $settings['style_formats'] = json_encode($style_formats);
+
+    return $settings;
+
+}
+
+add_filter( 'tiny_mce_before_init', __NAMESPACE__ . '\\my_mce_before_init' );
+
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', __NAMESPACE__ . '\\wpdocs_theme_add_editor_styles' );

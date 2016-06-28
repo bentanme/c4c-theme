@@ -34,7 +34,7 @@
 	}
 
 	// Used for recipe section
-	pre {
+	.ingredients {
 		// @extend .ripped-paper;
 		@extend .text-cursive;
 
@@ -46,7 +46,6 @@
 	    color: #444;
 	    line-height: 40px;
 		font-size: 18px;
-		white-space: pre-wrap;
 
 		// Let's draw the lines
 		background: white;
@@ -64,6 +63,8 @@
 		    border: 1px solid;
 		    border-color: transparent lighten($c4c-red, 40%);
 		}
+
+		p { margin: 0; }
 	}
 
 	// Drop caps to fancy things up, only target direct descendants
