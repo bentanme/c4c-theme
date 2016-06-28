@@ -70,7 +70,12 @@ function my_mce_before_init( $settings ) {
         'block' => 'div',
         'classes' => 'ingredients',
         'wrapper' => true
-      ]
+      ],
+      [
+        'title' => 'Rounded button',
+        'block' => 'a',
+        'classes' => 'btn btn-submit btn-primary btn-rounded',
+      ],
     ];
 
     $settings['style_formats'] = json_encode($style_formats);

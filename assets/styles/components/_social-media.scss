@@ -28,13 +28,16 @@
 	.social-youtube 	{ background: desaturate($company-youtube, 20%); }
 	.social-instagram 	{ background: desaturate($company-instagram, 20%); }
 	.social-twitter 	{ background: desaturate($company-twitter, 20%); }
-	.social-c4c 		{ background: desaturate($c4c-blue, 0%); }
+	.social-c4c 		{ background: desaturate($c4c-red, 0%); }
 }
 
 .social-media--header {
 	@include breakpoint-max('xs') {
 		display: none !important;
 	}
+
+	a { box-shadow: 0 0 0 3px #fff; }
 }
 .social-media--footer {
+
 }
