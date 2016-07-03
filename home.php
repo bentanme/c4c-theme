@@ -14,7 +14,7 @@ use Roots\Sage\Assets;
 	get_template_part('templates/newsletter-sign-up');
 	get_template_part('templates/home-about');
 	// get_template_part('templates/home-charities');
-	get_template_part('templates/home-partners');
+	// get_template_part('templates/home-partners');
 	get_template_part('templates/home-instagram');
 
 	wp_enqueue_script('responsive-bootstrap-toolkit', Assets\asset_path('scripts/responsive-bootstrap-toolkit.js'), ['jquery'], null, true);
